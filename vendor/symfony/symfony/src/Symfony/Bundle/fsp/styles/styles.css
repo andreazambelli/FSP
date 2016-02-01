@@ -1,0 +1,365 @@
+body
+{
+ margin: 0px; 
+ padding: 0px;
+}
+
+#page
+{
+ width: 100%;
+}
+
+/*Header*/
+
+#entete
+{
+ height: 180px;
+ background-color: #fff;
+}
+
+#logoFSP
+{
+ float: left;
+ margin-top: -40px;
+ margin-left: 110px;
+ height: 250px;
+}
+
+#drapeauFR
+{
+ float: right;
+ margin-right: 100px;
+ height: 50px;
+}
+
+#drapeauGB
+{
+ float: right;
+ margin-top: 50px;
+ margin-right: -50px;
+ height: 50px;
+}
+
+#drapeauCH
+{
+ float: right;
+ margin-top: 100px;
+ margin-right: -52px;
+ height: 53px;
+}
+
+/*Menu Thème*/
+
+#logement
+{
+ float: left;
+ margin-top: -8px;
+ margin-left: -20px;
+ height: 33px;
+}
+
+#cours
+{
+ float: left;
+ margin-top: -8px;
+ margin-left: 30px;
+ height: 33px;
+}
+
+#evenement
+{
+ float: left;
+ margin-top: -8px;
+ margin-left: 30px;
+ height: 33px;
+}
+
+#culture
+{
+ float: left;
+ margin-top: -8px;
+ margin-left: 30px;
+ height: 33px;
+}
+
+#plan
+{
+ float: left;
+ margin-top: -8px;
+ margin-left: 30px;
+ height: 33px;
+}
+
+#menuTheme
+{
+ background-color: #B2B4B4;
+ height: 40px;
+ margin: 0;
+}
+
+#menuList
+{
+ float: left;
+ margin: -17px 0 0 -20px;
+ display: inline;
+}
+
+#menuList li
+{
+ float: left;
+ display: inline;
+ list-style: none;
+}
+
+#menuList img
+{
+ padding: 0 0 0 70px;
+}
+
+#menuList li a
+{
+ color: #FB8C39;
+ font-size: 18px;
+ padding: 0 20px;
+ text-decoration: none;
+}
+
+#menuList li a:hover
+{
+ color: #000;
+}
+
+/*Bloc Gauche*/
+
+#blocGauche
+{
+ background-color: #B2B4B4;
+ border-radius: 4px;
+ width: 285px;
+ height: 200px;
+ margin: 30px 0 10px 5px;
+ border: 2px solid #000;
+}
+
+#barreH1
+{
+ height: 2px;
+ background-color: #000;
+ margin-top: 12px;
+}
+
+#barreH2
+{
+ height: 2px;
+ background-color: #000;
+ margin-top: 33px;
+}
+
+#barreH3
+{
+ height: 2px;
+ background-color: #000;
+ margin-top: 7px;
+}
+
+#barreH4
+{
+ height: 2px;
+ background-color: #000;
+ margin-top: 10px;
+}
+
+#barreV
+{
+ float: left;
+ height: 22px;
+ width: 1px;
+ background-color: #000;
+ margin: 5px 0 0 5px;
+}
+
+.form
+{
+ padding: 12px 0 0 0;
+}
+
+#search
+{
+ height: 14px;
+}
+
+#user
+{
+ float: left;
+ height: 22px;
+ margin: 6px 0 0 22px;
+}
+ 
+#connexion
+{
+ float:left;
+ padding: 8px 0 0 15px;
+}
+
+#inscription
+{
+ float: left;
+ margin-left: 4px;
+ padding: 8px 0 0 1px;
+}
+
+#ajouterAnnonce
+{
+ padding: 10px 0 0 58px;
+}
+
+#modifierAnnonce
+{
+ padding: 10px 0 0 55px;
+}
+
+#supprimerAnnonce
+{
+ padding: 10px 0 0 48px;
+}
+
+#blocGauche a
+{
+ text-decoration: none;
+ color: #000;
+}
+
+#blocGauche a:hover
+{
+ color: #FB8C39;
+}
+
+/*blocCentre*/
+
+#blocCentre
+{
+ min-height: 195px;
+ height: auto;
+ border-radius: 4px;
+ margin: -215px 0 100px 300px;
+ background-color: #fff;
+ width: 900px;
+ border: 6px solid #B2B4B4;
+}
+
+#blocCentre p
+{
+ text-decoration: none;
+ color: #FB8C39;
+}
+
+#contenu
+{
+ width: 100%;
+ margin: 0 0 25px 15px ;
+}
+
+#Annonces
+{
+ font-size: 33px;
+ margin: -20px 0 0 350px;
+}
+
+#AnnoncesTheme
+{
+ font-size: 33px;
+ margin: -20px 0 0 300px;
+}
+
+#AnnoncesThemeEvenement
+{
+ font-size: 33px;
+ margin: -20px 0 0 280px;
+}
+
+#gererAnnonces
+{
+ font-size: 33px;
+ margin: -20px 0 0 10px;
+}
+
+#gererConnexion
+{
+ font-size: 33px;
+ margin: 30px 0 0 350px;
+}
+
+#gererInscription
+{
+ font-size: 33px;
+ margin: 30px 0 0 350px;
+}
+
+.connexion, .inscription
+{
+ margin: 0 0 0 250px;
+}
+
+.connexion input, .inscription input
+{
+ margin-left: 70px;
+ text-align: center;
+ display: block;
+}
+
+#info
+{
+ margin-top: 12px;
+}
+
+#valider, #validerIns
+{
+ margin: 20px 0 0 90px;
+}
+
+#annuler, #annulerIns
+{
+ margin: -25px 0 0 220px; 
+}
+
+ 
+
+/*Footer*/
+
+#séparation
+{
+ background-color: #000;
+ height: 4px;
+}
+
+#footer
+{
+ background-color: #B2B4B4;
+ height: 200px;
+}
+
+#logoIRAM
+{
+ float: left;
+ height: 75px;
+ margin: 66px 300px 0 330px;
+}
+
+#logoUJM
+{
+ float: left;
+ height: 75px;
+ margin: 76px 300px 0 -180px;
+}
+
+#logoCILEC
+{
+ float: left;
+ height: 40px;
+ margin: 96px 75px 0 -175px;
+}
+
+#mention
+{
+ padding: 162px 0 0 400px;
+}

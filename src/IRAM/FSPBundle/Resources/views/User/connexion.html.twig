@@ -1,0 +1,23 @@
+{% extends "FSPBundle::accueil.html.twig" %}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="gererConnexion">
+     <p>Connexion</p>
+    </div>
+    {% if (message is defined)%}
+      <div class="erreur">
+       <ul>{{message}}</ul>
+      </div>
+    {% endif %}
+    <form method="POST" action="{{path('fsp_validerconnexion')}}" class="formConnexion">
+     <div class="connexion">
+          <input id="email" type="text" placeholder="E-mail *"/>
+          <input id="info" type="password" placeholder="Mot de passe *"/>
+          <input id="valider" type="submit" value="Valider" name="valider"/>
+          <input id="annuler" type="reset" value="Annuler" name"annuler"/>
+     </div>
+    </form>
+   </div>
+  </div>
+{% endblock %}

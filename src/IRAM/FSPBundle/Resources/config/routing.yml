@@ -1,0 +1,55 @@
+fsp_accueil:
+    path:     /accueil
+    defaults: { _controller: FSPBundle:Home:accueil }
+
+fsp_logement:
+    path:    /annonces-logement
+    defaults: { _controller: FSPBundle:Theme:logement }
+
+fsp_cours:
+    path:    /annonces-cours
+    defaults: { _controller: FSPBundle:Theme:cours }
+
+fsp_evenement:
+    path:    /annonces-evenements
+    defaults: { _controller: FSPBundle:Theme:evenement }
+
+fsp_culture:
+    path:    /annonces-culture
+    defaults: { _controller: FSPBundle:Theme:culture }
+
+fsp_plan:
+    path:    /annonces-plan
+    defaults: { _controller: FSPBundle:Theme:plan }
+
+fsp_connexion:
+    path:    /connexion
+    defaults: { _controller: FSPBundle:User:connexion }
+
+fsp_validerconnexion:
+    path:    /connexion-valide
+    defaults: { _controller: FSPBundle:User:validerconnexion }
+
+fsp_deconnexion:
+    path:    /deconnexion
+    defaults: { _controller: FSPBundle:User:deconnexion }
+
+fsp_inscription:
+    path:    /inscription
+    defaults: { _controller: FSPBundle:User:inscription }
+
+fsp_compte:
+    path:    /mon-compte
+    defaults: { _controller: FSPBundle:User:compte }
+
+fsp_ajouter:
+    path:    /ajouter-annonce
+    defaults: { _controller: FSPBundle:User:ajouterAnnonce }
+
+fsp_modifier:
+    path:   /modifier-annonce
+    defaults: { _controller: FSPBundle:User:modifierAnnonce }
+
+fsp_supprimer:
+    path:   /supprimer-annonce
+    defaults: { _controller: FSPBundle:User:supprimerAnnonce }

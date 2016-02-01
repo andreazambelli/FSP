@@ -1,0 +1,13 @@
+parameters:
+     db.host: mysql:host=localhost
+     db.name: dbname=FSP
+     db.user: root
+     db.mdp:  root
+
+services:
+#    s.example:
+#        class: SLAM\GSBBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+     fsp.pdo:
+         class: IRAM\FSPBundle\services\PdoFsp
+         arguments: ["mysql:host=localhost", "dbname=FSP", "root","root"]

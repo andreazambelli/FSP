@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+   <title>FSP - Foreign Student Platform</title>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <link href="{{ asset('bundles/fsp/styles/styles.css') }}" rel="stylesheet" type="text/css" />
+   <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+</head>
+
+<body>
+  <div id="page">
+    <div id="entete">
+     <a href="{{path('fsp_accueil')}}"><img src=" {{ asset('bundles/fsp/images/FSP.png') }}" id="logoFSP" alt="FSP - Foreign Student Platform" title="FSP - Foreign Student Platform"/></a>
+     <img src="{{ asset('bundles/fsp/images/france.png')}}" id="drapeauFR" alt="Français" title="Français" />
+     <img src="{{ asset('bundles/fsp/images/GB.png')}}" id="drapeauGB" alt="Anglais" title="Anglais" />
+     <img src="{{ asset('bundles/fsp/images/chine.png')}}" id="drapeauCH" alt="Chinois" title="Chinois" />
+     </div>
+     <div id="menuTheme">
+      <ul id="menuList">
+      <li>
+      <img src="{{asset('bundles/fsp/images/maison.png')}}" id="logement" title="Logement"/>
+      <a href="{{path('fsp_logement')}}" title="Logement">Logement</a>
+      </li>
+      <li>
+      <img src="{{asset('bundles/fsp/images/cours.png')}}" id="cours" title="Cours"/>
+      <a href="{{path('fsp_cours')}}" title="Cours">Cours</a>
+      </li>
+      <li>
+      <img src="{{asset('bundles/fsp/images/evenement.png')}}" id="evenement" title="Evénement"/>
+      <a href="{{path('fsp_evenement')}}" title="Evenement">Evénement</a>
+      </li>
+      <li>
+      <img src="{{asset('bundles/fsp/images/notredame.png')}}" id="culture" title="Culture"/>
+      <a href="{{path('fsp_culture')}}" title="Culture">Culture</a>
+      </li>
+      <li>
+      <img src="{{asset('bundles/fsp/images/planbis.png')}}" id="plan" title="Plan"/>
+      <a href="{{path('fsp_plan')}}" title="Plan">Plan</a>
+      </li>
+      </ul>
+     </div>
+       {% block body%}
+          {% block blocGauche %}
+          {% endblock %}
+          {% block blocCentre %}
+          {% endblock %}
+       {% endblock %}
+    <div id="footer">
+     <div id="séparation"></div>
+     <img src="{{ asset('bundles/fsp/images/iram.png')}}" id="logoIRAM" alt="IRAM" title="IRAM" />
+     <img src="{{ asset('bundles/fsp/images/UJM.png')}}" id="logoUJM" alt="UJM" title="UJM" />
+     <img src="{{ asset('bundles/fsp/images/cilec.png')}}" id="logoCILEC" alt="CILEC" title="CILEC" />
+     <div id="mention">
+     <p> &copy 2016 IRAM - Tous Droits Réservés - Mentions Légales
+     </p>
+     </div>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+{% extends "FSPBundle::accueil.html.twig" %}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="gererInscription">
+     <p>Inscription</p>
+    </div>
+    <form class="formInscription">
+      <div class="inscription">
+       <input id="nom" type="text" placeholder="Nom *"/>
+       <input id="info" type="text" placeholder="Prénom *"/>
+       <input id="info" type="text" placeholder="Date de Naissance *"/>
+       <input id="info" type="text" placeholder="Pays *"/>
+       <input id="info" type="text" placeholder="E-mail *"/>
+       <input id="info" type="password" placeholder="Mot de Passe *"/>
+       <input id="info" type="password" placeholder="Confirmation Mot de Passe *"/>
+       <input id="validerIns" type="submit" value="Valider" name="valider"/>
+       <input id="annulerIns" type="reset" value="Annuler" name="annuler"/>
+      </div>
+    </form>
+   </div>
+  </div>
+{% endblock %}

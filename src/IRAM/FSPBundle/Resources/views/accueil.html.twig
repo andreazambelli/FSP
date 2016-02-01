@@ -1,0 +1,43 @@
+{% extends "FSPBundle::layout.html.twig" %}
+{% block body %}
+{% block blocGauche %}
+  <div id="blocGauche">
+    <form class="form">
+	<div class="recherche">
+		<input type="text" name="keyword" placeholder="Recherche"/>
+		<button><img src="{{asset('bundles/fsp/images/search.png')}}" id="search"</img></button>
+	</div>
+    </form>
+    <div id="barreH1"></div>
+    <div><img src="{{asset('bundles/fsp/images/user.png')}}" id="user"</img></div>
+    <div id="connexion">
+      <a href="{{path('fsp_connexion')}}" alt="Connexion" title="Connexion">Connexion</a>
+    </div>
+    <div id="barreV"></div>
+    <div id="inscription">
+      <a href="{{path('fsp_inscription')}}" alt="S'inscrire" title="S'inscrire">S'inscrire</a>
+    </div>
+    <div id="barreH2"></div>
+    <div id="ajouterAnnonce">
+      <a href="{{path('fsp_ajouter')}}" alt="Ajouter une annonce" title="Ajouter une annonce">Ajouter une annonce</a>
+    </div>
+    <div id="barreH3"></div>
+    <div id="modifierAnnonce">
+      <a href="{{path('fsp_modifier')}}" alt="Modifier une annonce" title="Modifier une annonce">Modifier une annonce</a>
+    </div>
+    <div id="barreH4"></div>
+    <div id="supprimerAnnonce">
+      <a href="{{path('fsp_supprimer')}}" alt="Supprimer une annonce" title="Supprimer une annonce">Supprimer une annonce</a>
+    </div>
+  </div>
+{% endblock %}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="Annonces">
+     <p>Annonces</p>
+    </div>
+   </div>
+  </div>
+{% endblock %}
+{% endblock %}
