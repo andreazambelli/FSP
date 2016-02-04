@@ -27,10 +27,9 @@ class UserController extends Controller
 	$session->set('dateNaissance',$user['dateNaissance']);
 	$session->set('pays',$user['pays']);        
         return $this->render('FSPBundle:User:accueil.html.twig');
-           }
+          }
   }  
  
-
  public function deconnexionAction()
  {
 	$session = $this->get('request')->getSession();

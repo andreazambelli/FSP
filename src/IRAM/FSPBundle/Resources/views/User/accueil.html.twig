@@ -11,11 +11,11 @@
     <div id="barreH1"></div>
     <div><img src="{{asset('bundles/fsp/images/user.png')}}" id="user"</img></div>
     <div id="connexion">
-      <p>Bonjour </p><a href="{{path('fsp_compte')}}" alt="Mon Compte" title="Mon Compte">
+      <p>Bonjour <a href="{{path('fsp_compte')}}" alt="Mon Compte" title="Mon Compte">
           {% if(app.session.get('prenom') is defined ) %}
             {{app.session.get('prenom')}}
           {% endif %}
-     </a>
+     </a></p>
     </div>
     <div id="barreH2"></div>
     <div id="ajouterAnnonce">

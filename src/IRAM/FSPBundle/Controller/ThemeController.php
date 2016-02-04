@@ -1,27 +1,50 @@
 <?php
 namespace IRAM\FSPBundle\Controller;
+require_once("include/fct.inc.php");
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use PdoFsp;
 
 class ThemeController extends Controller
 {
  public function logementAction()
  {
-  return $this->render('FSPBundle:Theme:logement.html.twig');
+  $session = $this->get('request')->getSession();
+  $request = $this->get('request');
+  $pdo = $this->get('fsp.pdo');
+  $theme = 'logement';
+  $lesAnnonces = $pdo->getAnnoncesThemes($theme);
+  return $this->render('FSPBundle:Theme:logement.html.twig',array('lesAnnonces'=>$lesAnnonces));
  }
 
  public function coursAction()
  {
-  return $this->render('FSPBundle:Theme:cours.html.twig');
+  $session = $this->get('request')->getSession();
+  $request = $this->get('request');
+  $pdo = $this->get('fsp.pdo');
+  $theme = 'cours';
+  $lesAnnonces = $pdo->getAnnoncesThemes($theme);
+  return $this->render('FSPBundle:Theme:cours.html.twig',array('lesAnnonces'=>$lesAnnonces));
  }
 
  public function evenementAction()
  {
-  return $this->render('FSPBundle:Theme:evenement.html.twig');
+  $session = $this->get('request')->getSession();
+  $request = $this->get('request');
+  $pdo = $this->get('fsp.pdo');
+  $theme = 'evenement';
+  $lesAnnonces = $pdo->getAnnoncesThemes($theme);
+  return $this->render('FSPBundle:Theme:evenement.html.twig',array('lesAnnonces'=>$lesAnnonces));
  }
 
  public function cultureAction() 
  {
-  return $this->render('FSPBundle:Theme:culture.html.twig');
+  $session = $this->get('request')->getSession();
+  $request = $this->get('request');
+  $pdo = $this->get('fsp.pdo');
+  $theme = 'culture';
+  $lesAnnonces = $pdo->getAnnoncesThemes($theme);
+  return $this->render('FSPBundle:Theme:culture.html.twig',array('lesAnnonces'=>$lesAnnonces));
  }
 
  public function planAction()

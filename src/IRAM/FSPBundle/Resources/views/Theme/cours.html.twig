@@ -1,0 +1,32 @@
+{% extends "FSPBundle::accueil.html.twig" %}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="AnnoncesTheme">
+     <p>Annonces - Cours</p>
+    </div>
+    <table class ="listeAnnonce">
+       <tr>
+           <th class="titre">Titre</th>
+           <th class="info">Info</th>
+       </tr>
+
+       {% for uneAnnonce in lesAnnonces %}
+         {% set theme  = uneAnnonce.theme %}
+         {% set titre  = uneAnnonce.titre %}
+         {% set date   =  uneAnnonce.date %}
+         {% set prenom =  uneAnnonce.prenom %}
+         {% set etat   =  uneAnnonce.etat %}
+
+       <tr>
+           <td>{{theme}}</td>
+           <td>{{titre}}</td>
+           <td>Le {{date}}</td>
+           <td>Par {{prenom}}</td>
+           <td>Statut : {{etat}}</td>
+       </tr>
+       {% endfor %}
+      </table>
+     </div>
+    </div>
+{% endblock %}

@@ -9,11 +9,14 @@ class HomeController extends Controller
    public function accueilAction()
    {
     $session = $this->get('request')->getSession();
+    $request = $this->get('request');
+    $pdo = $this->get('fsp.pdo');
+    $lesAnnonces = $pdo->getAnnonces();
     if (estConnecte($session)){
     return $this->render('FSPBundle:User:accueil.html.twig');
    }
    else{
-	return $this->render('FSPBundle::accueil.html.twig');
+	return $this->render('FSPBundle::accueil.html.twig', array('lesAnnonces'=>$lesAnnonces));
        }
    }
 
