@@ -141,17 +141,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/connexion')) {
-            // fsp_connexion
-            if ($pathinfo === '/connexion') {
-                return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::connexionAction',  '_route' => 'fsp_connexion',);
-            }
-
-            // fsp_validerconnexion
-            if ($pathinfo === '/connexion-valide') {
-                return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::validerconnexionAction',  '_route' => 'fsp_validerconnexion',);
-            }
-
+        // fsp_connexion
+        if ($pathinfo === '/connexion') {
+            return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::connexionAction',  '_route' => 'fsp_connexion',);
         }
 
         // fsp_deconnexion

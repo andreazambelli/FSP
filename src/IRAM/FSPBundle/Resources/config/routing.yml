@@ -26,10 +26,6 @@ fsp_connexion:
     path:    /connexion
     defaults: { _controller: FSPBundle:User:connexion }
 
-fsp_validerconnexion:
-    path:    /connexion-valide
-    defaults: { _controller: FSPBundle:User:validerconnexion }
-
 fsp_deconnexion:
     path:    /deconnexion
     defaults: { _controller: FSPBundle:User:deconnexion }

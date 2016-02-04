@@ -10,4 +10,4 @@ services:
 #        arguments: [@service_id, "plain_value", %parameter%]
      fsp.pdo:
          class: IRAM\FSPBundle\services\PdoFsp
-         arguments: ["mysql:host=localhost", "dbname=FSP", "root","root"]
+         arguments: [%db.host%,%db.name%,%db.user%,%db.mdp%]

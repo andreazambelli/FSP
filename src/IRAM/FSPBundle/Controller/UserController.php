@@ -2,9 +2,7 @@
 
 namespace IRAM\FSPBundle\Controller;
 require_once("include/fct.inc.php");
-require_once("include/class.pdofsp.inc.php");
 use Symfony\Component\HttpFoundation\Session\Session;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use PdoFsp;
 
@@ -12,19 +10,11 @@ class UserController extends Controller
 {
  public function connexionAction()
  {
-  return $this->render('FSPBundle:User:connexion.html.twig');
- }
-
-
-
-
- public function validerconnexionAction()
- {
      $session = $this->get('request')->getSession();
      $request = $this->get('request');
      $email = $request->request->get('email');
      $mdp = $request->request->get('mdp');
-     $pdo = PdoFsp::getPdoFsp();
+     $pdo = $this->get('fsp.pdo');
      $user = $pdo->getInfosUser($email,$mdp);
      if(!is_array($user)){
        return $this->render('FSPBundle:User:connexion.html.twig',array(
@@ -36,7 +26,7 @@ class UserController extends Controller
         $session->set('prenom',$user['prenom']);
 	$session->set('dateNaissance',$user['dateNaissance']);
 	$session->set('pays',$user['pays']);        
-        return $this->render('FSPBundle::accueil.html.twig');
+        return $this->render('FSPBundle:User:accueil.html.twig');
            }
   }  
  

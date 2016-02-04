@@ -11,7 +11,7 @@
  * @return vrai ou faux 
  */
 function estConnecte(){
-  return isset($_SESSION['emailUser']);
+  return isset($_SESSION['email']);
 }
 /**
  * Enregistre dans une variable session les infos d'un visiteur
@@ -21,7 +21,7 @@ function estConnecte(){
  * @param $prenom
  */
 function connecter($email,$nom,$prenom,$dateNaissance,$pays){
-	$_SESSION['emailUser']= $email; 
+	$_SESSION['email']= $email; 
 	$_SESSION['nom']= $nom;
 	$_SESSION['prenom']= $prenom;
 	$_SESSION['dateNaissance']= $dateNaissance;

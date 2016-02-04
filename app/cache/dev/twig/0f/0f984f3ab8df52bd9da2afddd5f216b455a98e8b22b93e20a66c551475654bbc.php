@@ -21,20 +21,20 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6a69af6f785a07b54c1642e66debc82d983b3abc09e89ed59776aeb896cb78d2 = $this->env->getExtension("native_profiler");
-        $__internal_6a69af6f785a07b54c1642e66debc82d983b3abc09e89ed59776aeb896cb78d2->enter($__internal_6a69af6f785a07b54c1642e66debc82d983b3abc09e89ed59776aeb896cb78d2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:connexion.html.twig"));
+        $__internal_73e462cc7a9332173d40e17b1e8ab95f6a77dc7845e2bd878a762d91414653b6 = $this->env->getExtension("native_profiler");
+        $__internal_73e462cc7a9332173d40e17b1e8ab95f6a77dc7845e2bd878a762d91414653b6->enter($__internal_73e462cc7a9332173d40e17b1e8ab95f6a77dc7845e2bd878a762d91414653b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:connexion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_6a69af6f785a07b54c1642e66debc82d983b3abc09e89ed59776aeb896cb78d2->leave($__internal_6a69af6f785a07b54c1642e66debc82d983b3abc09e89ed59776aeb896cb78d2_prof);
+        $__internal_73e462cc7a9332173d40e17b1e8ab95f6a77dc7845e2bd878a762d91414653b6->leave($__internal_73e462cc7a9332173d40e17b1e8ab95f6a77dc7845e2bd878a762d91414653b6_prof);
 
     }
 
     // line 2
     public function block_blocCentre($context, array $blocks = array())
     {
-        $__internal_8ce5e709d7cf3617491743254848259d680f683fe82ae4d230a69e5b8a639a50 = $this->env->getExtension("native_profiler");
-        $__internal_8ce5e709d7cf3617491743254848259d680f683fe82ae4d230a69e5b8a639a50->enter($__internal_8ce5e709d7cf3617491743254848259d680f683fe82ae4d230a69e5b8a639a50_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
+        $__internal_b3a966746ba4464ef25dd10c10afa93e7815c598d4ab2eac04cb565c84de3aa1 = $this->env->getExtension("native_profiler");
+        $__internal_b3a966746ba4464ef25dd10c10afa93e7815c598d4ab2eac04cb565c84de3aa1->enter($__internal_b3a966746ba4464ef25dd10c10afa93e7815c598d4ab2eac04cb565c84de3aa1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
 
         // line 3
         echo "  <div id=\"blocCentre\">
@@ -54,9 +54,11 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
       </div>
     ";
         }
+        // line 12
+        echo "\t
+    <form method=\"POST\" action=\"";
         // line 13
-        echo "    <form method=\"POST\" action=\"";
-        echo $this->env->getExtension('routing')->getPath("fsp_validerconnexion");
+        echo $this->env->getExtension('routing')->getPath("fsp_connexion");
         echo "\" class=\"formConnexion\">
      <div class=\"connexion\">
           <input id=\"email\" type=\"text\" placeholder=\"E-mail *\"/>
@@ -69,7 +71,7 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
   </div>
 ";
         
-        $__internal_8ce5e709d7cf3617491743254848259d680f683fe82ae4d230a69e5b8a639a50->leave($__internal_8ce5e709d7cf3617491743254848259d680f683fe82ae4d230a69e5b8a639a50_prof);
+        $__internal_b3a966746ba4464ef25dd10c10afa93e7815c598d4ab2eac04cb565c84de3aa1->leave($__internal_b3a966746ba4464ef25dd10c10afa93e7815c598d4ab2eac04cb565c84de3aa1_prof);
 
     }
 
@@ -85,7 +87,7 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
 
     public function getDebugInfo()
     {
-        return array (  58 => 13,  52 => 10,  49 => 9,  47 => 8,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  61 => 13,  58 => 12,  52 => 10,  49 => 9,  47 => 8,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "FSPBundle::accueil.html.twig" %}*/
@@ -99,8 +101,8 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
 /*       <div class="erreur">*/
 /*        <ul>{{message}}</ul>*/
 /*       </div>*/
-/*     {% endif %}*/
-/*     <form method="POST" action="{{path('fsp_validerconnexion')}}" class="formConnexion">*/
+/*     {% endif %}	*/
+/*     <form method="POST" action="{{path('fsp_connexion')}}" class="formConnexion">*/
 /*      <div class="connexion">*/
 /*           <input id="email" type="text" placeholder="E-mail *"/>*/
 /*           <input id="info" type="password" placeholder="Mot de passe *"/>*/
