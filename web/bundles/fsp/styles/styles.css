@@ -322,7 +322,35 @@ body
  margin: -25px 0 0 220px; 
 }
 
- 
+/*Annonces*/
+
+.theme
+{
+ float: left;
+}
+
+.titre
+{
+
+}
+
+.date
+{
+ float: right;
+ margin-left: 220px;
+}
+
+.prenom
+{
+ float: right;
+ margin: 15px 0 -25px 220px;
+}
+
+.statut
+{
+ float: right;
+ margin: 45px 0 -45px 200px;
+}
 
 /*Footer*/
 

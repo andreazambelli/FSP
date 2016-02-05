@@ -6,24 +6,18 @@
      <p>Annonces - Culture</p>
     </div>
       <table class ="listeAnnonce">
-       <tr>
-           <th class="titre">Titre</th>
-           <th class="info">Info</th>
-       </tr>
 
        {% for uneAnnonce in lesAnnonces %}
-         {% set theme  = uneAnnonce.theme %}
          {% set titre  = uneAnnonce.titre %}
          {% set date   =  uneAnnonce.date %}
          {% set prenom =  uneAnnonce.prenom %}
          {% set etat   =  uneAnnonce.etat %}
 
        <tr>
-           <td>{{theme}}</td>
-           <td>{{titre}}</td>
-           <td>Le {{date}}</td>
-           <td>Par {{prenom}}</td>
-           <td>Statut : {{etat}}</td>
+           <td class="titre">{{titre}}</td>
+           <td class="date">Le {{date}}</td>
+           <td class="prenom">Par {{prenom}}</td>
+           <td class="statut">Statut : {{etat}}</td>
        </tr>
        {% endfor %}
       </table>
