@@ -8,42 +8,48 @@ use PdoFsp;
 
 class UserController extends Controller
 {
+
  public function connexionAction()
  {
-     $session = $this->get('request')->getSession();
-     $request = $this->get('request');
-     $email = $request->request->get('email');
-     $mdp = $request->request->get('mdp');
-     $pdo = $this->get('fsp.pdo');
-     $user = $pdo->getInfosUser($email,$mdp);
-     if(!is_array($user)){
-       return $this->render('FSPBundle:User:connexion.html.twig',array(
-         'message'=>"Erreur d'email ou de mot de passe "));
-     }
-     else {
-        $session->set('email',$user['email']);
-        $session->set('nom',$user['nom']);
-        $session->set('prenom',$user['prenom']);
-	$session->set('dateNaissance',$user['dateNaissance']);
-	$session->set('pays',$user['pays']);        
-        return $this->render('FSPBundle:User:accueil.html.twig');
-          }
-  }  
- 
- public function deconnexionAction()
- {
-	$session = $this->get('request')->getSession();
-	$session->clear();
-	return $this->render('FSPBundle:User:connexion.html.twig');
- }
- public function inscriptionAction()
- {
-  return $this->render('FSPBundle:User:inscription.html.twig');
+  return $this->render('FSPBundle:User:connexion.html.twig');
  }
 
- public function ajouterAnnonceAction()
+ public function validerconnexionAction()
  {
-  return $this->render('FSPBundle:User:ajouter.html.twig');
+$session = $this->get('request')->getSession();
+$request = $this->get('request');
+$email = $request->request->get('email');
+$mdp = $request->request->get('mdp');
+$pdo = $this->get('fsp.pdo');
+$user = $pdo->getInfosUser($email,$mdp);
+if(!is_array($user)){
+return $this->render('FSPBundle:User:connexion.html.twig',array(
+ 'message'=>"Erreur d'email ou de mot de passe "));
+}
+else {
+$session->set('email',$user['email']);
+$session->set('nom',$user['nom']);
+$session->set('prenom',$user['prenom']);
+$session->set('dateNaissance',$user['dateNaissance']);
+$session->set('pays',$user['pays']);        
+return $this->render('FSPBundle:User:accueil.html.twig');
+  }
+}  
+
+public function deconnexionAction()
+{
+$session = $this->get('request')->getSession();
+$session->clear();
+return $this->render('FSPBundle:User:connexion.html.twig');
+}
+public function inscriptionAction()
+{
+return $this->render('FSPBundle:User:inscription.html.twig');
+}
+
+public function ajouterAnnonceAction()
+{
+return $this->render('FSPBundle:User:ajouter.html.twig');
  }
 
  public function modifierAnnonceAction()

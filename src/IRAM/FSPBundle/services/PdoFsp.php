@@ -23,7 +23,7 @@ class PdoFsp{
 
 
 	public function getInfosUser($email,$mdp){
-		$req = "select profil.email as email, profil.nom as nom, profil.prenom as prenom, profil.dateNaissance as dateNaissance, profil.pays as pays from profil where profil.email ='$email' and profil.mdp ='$mdp'";
+		$req = "select profil.email as email, profil.nom as nom, profil.prenom as prenom, profil.dateNaissance as dateNaissance, profil.pays as pays from profil where profil.email='$email' and profil.mdp='$mdp'";
 		$rs = PdoFsp::$monPdo->query($req);
 		$ligne = $rs->fetch();
 		return $ligne;
