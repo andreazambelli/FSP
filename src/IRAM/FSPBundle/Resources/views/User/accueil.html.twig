@@ -1,7 +1,7 @@
 {% extends "FSPBundle::layout.html.twig" %}
 {% block body %}
 {% block blocGauche %}
-  <div id="blocGauche">
+  <div id="blocGaucheAccueil">
     <form class="form">
 	<div class="recherche">
 		<input type="text" name="keyword" placeholder="Recherche"/>
@@ -9,23 +9,33 @@
 	</div>
     </form>
     <div id="barreH1"></div>
-    <div><img src="{{asset('bundles/fsp/images/user.png')}}" id="user"</img></div>
-    <div id="connexion">
-      <p>Bonjour <a href="{{path('fsp_compte')}}" alt="Mon Compte" title="Mon Compte">
+    <div><img src="{{asset('bundles/fsp/images/user.png')}}" id="user"</img>
+    </div>
+    <div id="compte">
+      <p>Bonjour 
           {% if(app.session.get('prenom') is defined ) %}
             {{app.session.get('prenom')}}
           {% endif %}
-     </a></p>
+      </p>
     </div>
     <div id="barreH2"></div>
+     <div id="compteUser">
+      <a href="{{path('fsp_compte')}}" alt="Mon Compte">Mon Compte</a>
+     </div>
+    <div id="barreVAccueil"></div>
+        <div><img src="{{asset('bundles/fsp/images/deconnexion.png')}}" id="deconnexion"</img></div>
+        <div id="decoLien">
+        <a href="{{path('fsp_deconnexion')}}" alt="Déconnexion">Déconnexion</a>
+        </div>
+    <div id="barreH3Accueil"></div>
     <div id="ajouterAnnonce">
       <a href="{{path('fsp_ajouter')}}" alt="Ajouter une annonce" title="Ajouter une annonce">Ajouter une annonce</a>
     </div>
-    <div id="barreH3"></div>
+    <div id="barreH4Accueil"></div>
     <div id="modifierAnnonce">
       <a href="{{path('fsp_modifier')}}" alt="Modifier une annonce" title="Modifier une annonce">Modifier une annonce</a>
     </div>
-    <div id="barreH4"></div>
+    <div id="barreH5Accueil"></div>
     <div id="supprimerAnnonce">
       <a href="{{path('fsp_supprimer')}}" alt="Supprimer une annonce" title="Supprimer une annonce">Supprimer une annonce</a>
     </div>

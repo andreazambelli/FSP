@@ -141,6 +141,16 @@ body
  border: 2px solid #000;
 }
 
+#blocGaucheAccueil
+{
+ background-color: #B2B4B4;
+ border-radius: 4px;
+ width: 285px;
+ height: 230px;
+ margin: 30px 0 10px 5px;
+ border: 2px solid #000;
+}
+
 #barreH1
 {
  height: 2px;
@@ -162,11 +172,32 @@ body
  margin-top: 7px;
 }
 
+#barreH3Accueil
+{
+ height: 2px;
+ background-color: #000;
+ margin-top: 35px;
+}
+
 #barreH4
 {
  height: 2px;
  background-color: #000;
  margin-top: 10px;
+}
+
+#barreH4Accueil
+{
+ height: 2px;
+ background-color: #000;
+ margin-top: 6px;
+}
+
+#barreH5Accueil
+{
+ height: 2px;
+ background-color: #000;
+ margin-top: 5px;
 }
 
 #barreV
@@ -176,6 +207,15 @@ body
  width: 1px;
  background-color: #000;
  margin: 5px 0 0 5px;
+}
+
+#barreVAccueil
+{
+ float: left;
+ height: 22px;
+ width: 1px;
+ background-color: #000;
+ margin: -3px 0 0 12px;
 }
 
 .form
@@ -194,11 +234,37 @@ body
  height: 22px;
  margin: 6px 0 0 22px;
 }
+
+#deconnexion
+{
+ float: left;
+ height: 22px;
+ margin: -22px 0 0 145px;
+}
  
+#decoLien
+{
+ float: left;
+ margin: -20px 0 0 170px;
+}
+
 #connexion
 {
  float:left;
  padding: 8px 0 0 15px;
+}
+
+#compte
+{
+ float: left;
+ padding-left: 15px;
+ margin: -8px 0 0 2px;
+}
+
+#compteUser
+{
+ float: left;
+ margin-left: 22px;
 }
 
 #inscription
@@ -223,22 +289,43 @@ body
  padding: 10px 0 0 48px;
 }
 
-#blocGauche a
+#blocGauche a, #blocGaucheAccueil a
 {
  text-decoration: none;
  color: #000;
 }
 
-#blocGauche a:hover
+#blocGauche a:hover, #blocGaucheAccueil a:hover
 {
  color: #FB8C39;
 }
 
 /*blocCentre*/
 
+.erreurLogo
+{
+ float: left;
+ height: 22px;
+ padding: 6px 0 0 10px;
+}
+
+.erreur
+{
+ float: left;
+ background-color: #EC0027;
+ margin: -35px 0 0 280px;
+ border-radius: 4px;
+}
+
+.erreur ul
+{
+ height: 1px;
+}
+
+
 #blocCentre
 {
- min-height: 195px;
+ min-height: 200px;
  height: auto;
  border-radius: 4px;
  margin: -215px 0 100px 300px;
@@ -337,13 +424,13 @@ body
 .date
 {
  float: right;
- margin-left: 220px;
+ margin-left: -150px;
 }
 
 .prenom
 {
  float: right;
- margin: 15px 0 -25px 220px;
+ margin: 15px 0 -25px 250px;
 }
 
 .statut

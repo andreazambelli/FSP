@@ -7,6 +7,7 @@
     </div>
     {% if(message is defined)%}
       <div class="erreur">
+         <img src="{{asset('bundles/fsp/images/erreur.png')}}" class="erreurLogo"></img>
        <ul>{{message}}</ul>
       </div>
     {% endif %}	
