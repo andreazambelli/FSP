@@ -42,6 +42,22 @@ class PdoFsp{
                 $lesLignes = $rs->fetchAll();
                 return $lesLignes;
         }
+	public function getAnnoncesUser($email){
+		 $req = "select annonce.titre as titre, annonce.date as date, theme.libelle as theme, etat.libelle as etat from annonce, theme, profil, etat where annonce.refemail = profil.email and profil.email = '$email' and annonce.refidtheme = theme.id and annonce.refidetat = etat.id";
+		$rs = PdoFsp::$monPdo->query($req);
+		$lesLignes = $rs->fetchAll();
+		return $lesLignes;
+	 }
+
+	public function getCommentaireAnnonce($id){
+		$req = "select commentaire.contenu as contenu, commentaire.date as date, profil.nom as nom, profil.prenom as prenom from commentaire, profil, annonce where commentaire.refemail = profil.email and commentaire.refidannonce = annonce.id and annonce.id = '$id'";
+		$rs = PdoFsp::$monPdo->query($req);
+		$lesLignes = $rs->fetchAll();
+		return $lesLignes;
+	}
+
+
+
 
 }
 ?>	

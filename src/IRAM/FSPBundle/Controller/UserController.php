@@ -61,5 +61,15 @@ return $this->render('FSPBundle:User:ajouter.html.twig');
  {
   return $this->render('FSPBundle:User:supprimer.html.twig');
  }
+ public function compteAction()
+ {
+  $session = $this->get('request')->getSession();
+  $request = $this->get('request');
+  $pdo = $this->get('fsp.pdo');
+  $email = $request->request->get('email');
+  $lesAnnonces = $pdo->getAnnoncesUser($email);
+  return $this->render('FSPBundle:User:compte.html.twig',array('lesAnnonces'=>$lesAnnonces));
+ }
+
 }
 

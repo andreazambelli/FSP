@@ -146,6 +146,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::connexionAction',  '_route' => 'fsp_connexion',);
         }
 
+        // fsp_validerconnexion
+        if ($pathinfo === '/validerconnexion') {
+            return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::validerconnexionAction',  '_route' => 'fsp_validerconnexion',);
+        }
+
         // fsp_deconnexion
         if ($pathinfo === '/deconnexion') {
             return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::deconnexionAction',  '_route' => 'fsp_deconnexion',);
