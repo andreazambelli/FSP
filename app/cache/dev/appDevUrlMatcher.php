@@ -106,9 +106,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         if (0 === strpos($pathinfo, '/a')) {
-            // fsp_accueil
-            if ($pathinfo === '/accueil') {
-                return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\HomeController::accueilAction',  '_route' => 'fsp_accueil',);
+            if (0 === strpos($pathinfo, '/accueil')) {
+                // fsp_accueil
+                if ($pathinfo === '/accueil') {
+                    return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\HomeController::accueilAction',  '_route' => 'fsp_accueil',);
+                }
+
+                // fsp_accueil_connecte
+                if ($pathinfo === '/accueil-connecte') {
+                    return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::accueilAction',  '_route' => 'fsp_accueil_connecte',);
+                }
+
             }
 
             if (0 === strpos($pathinfo, '/annonces-')) {
@@ -146,6 +154,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::connexionAction',  '_route' => 'fsp_connexion',);
         }
 
+        // fsp_validerconnexion
+        if ($pathinfo === '/validerconnexion') {
+            return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::validerconnexionAction',  '_route' => 'fsp_validerconnexion',);
+        }
+
         // fsp_deconnexion
         if ($pathinfo === '/deconnexion') {
             return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::deconnexionAction',  '_route' => 'fsp_deconnexion',);
@@ -154,6 +167,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // fsp_inscription
         if ($pathinfo === '/inscription') {
             return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::inscriptionAction',  '_route' => 'fsp_inscription',);
+        }
+
+        // fsp_validerinscription
+        if ($pathinfo === '/validerinscription') {
+            return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::validerinscriptionAction',  '_route' => 'fsp_validerinscription',);
         }
 
         // fsp_compte

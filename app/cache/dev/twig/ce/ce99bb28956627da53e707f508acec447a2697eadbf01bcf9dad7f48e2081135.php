@@ -21,36 +21,38 @@ class __TwigTemplate_9631ff6192622da61b3015de9e3134212542461a0055371e38019181c7d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3b45a77a9941e90aa75185dd20dd24c786c6cd03ac580dbb9c4cd7f3af04c115 = $this->env->getExtension("native_profiler");
-        $__internal_3b45a77a9941e90aa75185dd20dd24c786c6cd03ac580dbb9c4cd7f3af04c115->enter($__internal_3b45a77a9941e90aa75185dd20dd24c786c6cd03ac580dbb9c4cd7f3af04c115_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:inscription.html.twig"));
+        $__internal_03f83a38da302eaf6e700955d773f0895eadb544351edfbfda79fb3994518741 = $this->env->getExtension("native_profiler");
+        $__internal_03f83a38da302eaf6e700955d773f0895eadb544351edfbfda79fb3994518741->enter($__internal_03f83a38da302eaf6e700955d773f0895eadb544351edfbfda79fb3994518741_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:inscription.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_3b45a77a9941e90aa75185dd20dd24c786c6cd03ac580dbb9c4cd7f3af04c115->leave($__internal_3b45a77a9941e90aa75185dd20dd24c786c6cd03ac580dbb9c4cd7f3af04c115_prof);
+        $__internal_03f83a38da302eaf6e700955d773f0895eadb544351edfbfda79fb3994518741->leave($__internal_03f83a38da302eaf6e700955d773f0895eadb544351edfbfda79fb3994518741_prof);
 
     }
 
     // line 2
     public function block_blocCentre($context, array $blocks = array())
     {
-        $__internal_47dd792628e61a081825e6fbc796727683bcfdb19765104a5969402a983da89b = $this->env->getExtension("native_profiler");
-        $__internal_47dd792628e61a081825e6fbc796727683bcfdb19765104a5969402a983da89b->enter($__internal_47dd792628e61a081825e6fbc796727683bcfdb19765104a5969402a983da89b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
+        $__internal_11adbbb523e2db66665c2830e0dc3f531d334a0f7b459980078fda53be113823 = $this->env->getExtension("native_profiler");
+        $__internal_11adbbb523e2db66665c2830e0dc3f531d334a0f7b459980078fda53be113823->enter($__internal_11adbbb523e2db66665c2830e0dc3f531d334a0f7b459980078fda53be113823_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
 
         // line 3
-        echo "  <div id=\"blocCentre\">
+        echo "  <div id=\"blocCentreAccueil\">
    <div id=\"contenu\">
     <div id=\"gererInscription\">
      <p>Inscription</p>
     </div>
-    <form class=\"formInscription\">
+    <form method=\"POST\" action=\"";
+        // line 8
+        echo $this->env->getExtension('routing')->getPath("fsp_validerinscription");
+        echo "\" class=\"formInscription\">
       <div class=\"inscription\">
-       <input id=\"nom\" type=\"text\" placeholder=\"Nom *\"/>
-       <input id=\"info\" type=\"text\" placeholder=\"Prénom *\"/>
-       <input id=\"info\" type=\"text\" placeholder=\"Date de Naissance *\"/>
-       <input id=\"info\" type=\"text\" placeholder=\"Pays *\"/>
-       <input id=\"info\" type=\"text\" placeholder=\"E-mail *\"/>
-       <input id=\"info\" type=\"password\" placeholder=\"Mot de Passe *\"/>
-       <input id=\"info\" type=\"password\" placeholder=\"Confirmation Mot de Passe *\"/>
+       <input id=\"nom\" type=\"text\" name=\"nom\" placeholder=\"Nom *\"/>
+       <input id=\"info\" type=\"text\" name=\"prenom\" placeholder=\"Prénom *\"/>
+       <input id=\"info\" type=\"text\" name=\"dateNaissance\" placeholder=\"Date de Naissance *\"/>
+       <input id=\"info\" type=\"text\" name=\"pays\" placeholder=\"Pays *\"/>
+       <input id=\"info\" type=\"text\" name=\"email\" placeholder=\"E-mail *\"/>
+       <input id=\"info\" type=\"password\" name=\"mdp\" placeholder=\"Mot de Passe *\"/>
        <input id=\"validerIns\" type=\"submit\" value=\"Valider\" name=\"valider\"/>
        <input id=\"annulerIns\" type=\"reset\" value=\"Annuler\" name=\"annuler\"/>
       </div>
@@ -59,7 +61,7 @@ class __TwigTemplate_9631ff6192622da61b3015de9e3134212542461a0055371e38019181c7d
   </div>
 ";
         
-        $__internal_47dd792628e61a081825e6fbc796727683bcfdb19765104a5969402a983da89b->leave($__internal_47dd792628e61a081825e6fbc796727683bcfdb19765104a5969402a983da89b_prof);
+        $__internal_11adbbb523e2db66665c2830e0dc3f531d334a0f7b459980078fda53be113823->leave($__internal_11adbbb523e2db66665c2830e0dc3f531d334a0f7b459980078fda53be113823_prof);
 
     }
 
@@ -75,25 +77,24 @@ class __TwigTemplate_9631ff6192622da61b3015de9e3134212542461a0055371e38019181c7d
 
     public function getDebugInfo()
     {
-        return array (  40 => 3,  34 => 2,  11 => 1,);
+        return array (  47 => 8,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "FSPBundle::accueil.html.twig" %}*/
 /* {% block blocCentre %}*/
-/*   <div id="blocCentre">*/
+/*   <div id="blocCentreAccueil">*/
 /*    <div id="contenu">*/
 /*     <div id="gererInscription">*/
 /*      <p>Inscription</p>*/
 /*     </div>*/
-/*     <form class="formInscription">*/
+/*     <form method="POST" action="{{path('fsp_validerinscription')}}" class="formInscription">*/
 /*       <div class="inscription">*/
-/*        <input id="nom" type="text" placeholder="Nom *"/>*/
-/*        <input id="info" type="text" placeholder="Prénom *"/>*/
-/*        <input id="info" type="text" placeholder="Date de Naissance *"/>*/
-/*        <input id="info" type="text" placeholder="Pays *"/>*/
-/*        <input id="info" type="text" placeholder="E-mail *"/>*/
-/*        <input id="info" type="password" placeholder="Mot de Passe *"/>*/
-/*        <input id="info" type="password" placeholder="Confirmation Mot de Passe *"/>*/
+/*        <input id="nom" type="text" name="nom" placeholder="Nom *"/>*/
+/*        <input id="info" type="text" name="prenom" placeholder="Prénom *"/>*/
+/*        <input id="info" type="text" name="dateNaissance" placeholder="Date de Naissance *"/>*/
+/*        <input id="info" type="text" name="pays" placeholder="Pays *"/>*/
+/*        <input id="info" type="text" name="email" placeholder="E-mail *"/>*/
+/*        <input id="info" type="password" name="mdp" placeholder="Mot de Passe *"/>*/
 /*        <input id="validerIns" type="submit" value="Valider" name="valider"/>*/
 /*        <input id="annulerIns" type="reset" value="Annuler" name="annuler"/>*/
 /*       </div>*/

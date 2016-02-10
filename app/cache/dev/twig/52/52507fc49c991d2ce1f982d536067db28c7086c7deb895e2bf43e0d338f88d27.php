@@ -8,7 +8,7 @@ class __TwigTemplate_2b1844afaeaf2a34db4ad11637702c4b013fb79b7b124f1a63d48aa9b98
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("FSPBundle::layout.html.twig", "FSPBundle:User:accueil.html.twig", 1);
+        $this->parent = $this->loadTemplate("FSPBundle:User:layout.html.twig", "FSPBundle:User:accueil.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
             'blocGauche' => array($this, 'block_blocGauche'),
@@ -18,43 +18,43 @@ class __TwigTemplate_2b1844afaeaf2a34db4ad11637702c4b013fb79b7b124f1a63d48aa9b98
 
     protected function doGetParent(array $context)
     {
-        return "FSPBundle::layout.html.twig";
+        return "FSPBundle:User:layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7fbbf3dea5461b800ceff531c4b3d890cdddafac6b35484b0fd9d539cd658a8e = $this->env->getExtension("native_profiler");
-        $__internal_7fbbf3dea5461b800ceff531c4b3d890cdddafac6b35484b0fd9d539cd658a8e->enter($__internal_7fbbf3dea5461b800ceff531c4b3d890cdddafac6b35484b0fd9d539cd658a8e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:accueil.html.twig"));
+        $__internal_947e5114864e12315004919f1e69e3859569817171853e9da025aeff65b18549 = $this->env->getExtension("native_profiler");
+        $__internal_947e5114864e12315004919f1e69e3859569817171853e9da025aeff65b18549->enter($__internal_947e5114864e12315004919f1e69e3859569817171853e9da025aeff65b18549_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:accueil.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7fbbf3dea5461b800ceff531c4b3d890cdddafac6b35484b0fd9d539cd658a8e->leave($__internal_7fbbf3dea5461b800ceff531c4b3d890cdddafac6b35484b0fd9d539cd658a8e_prof);
+        $__internal_947e5114864e12315004919f1e69e3859569817171853e9da025aeff65b18549->leave($__internal_947e5114864e12315004919f1e69e3859569817171853e9da025aeff65b18549_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_c7a3a921f29bb30d582097db9fa2d46c043a2a222ae9e1ffd3408bab3c9b2c5e = $this->env->getExtension("native_profiler");
-        $__internal_c7a3a921f29bb30d582097db9fa2d46c043a2a222ae9e1ffd3408bab3c9b2c5e->enter($__internal_c7a3a921f29bb30d582097db9fa2d46c043a2a222ae9e1ffd3408bab3c9b2c5e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b27a3cc73c92aee671bf0ea6313d302e82c0f98d0d36607b119dd63d48e307d0 = $this->env->getExtension("native_profiler");
+        $__internal_b27a3cc73c92aee671bf0ea6313d302e82c0f98d0d36607b119dd63d48e307d0->enter($__internal_b27a3cc73c92aee671bf0ea6313d302e82c0f98d0d36607b119dd63d48e307d0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         $this->displayBlock('blocGauche', $context, $blocks);
-        // line 34
+        // line 44
         $this->displayBlock('blocCentre', $context, $blocks);
         
-        $__internal_c7a3a921f29bb30d582097db9fa2d46c043a2a222ae9e1ffd3408bab3c9b2c5e->leave($__internal_c7a3a921f29bb30d582097db9fa2d46c043a2a222ae9e1ffd3408bab3c9b2c5e_prof);
+        $__internal_b27a3cc73c92aee671bf0ea6313d302e82c0f98d0d36607b119dd63d48e307d0->leave($__internal_b27a3cc73c92aee671bf0ea6313d302e82c0f98d0d36607b119dd63d48e307d0_prof);
 
     }
 
     // line 3
     public function block_blocGauche($context, array $blocks = array())
     {
-        $__internal_6402002a57bd6bc3282df41b8be467851c62510f1f6c6f2092ae729972f86a32 = $this->env->getExtension("native_profiler");
-        $__internal_6402002a57bd6bc3282df41b8be467851c62510f1f6c6f2092ae729972f86a32->enter($__internal_6402002a57bd6bc3282df41b8be467851c62510f1f6c6f2092ae729972f86a32_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocGauche"));
+        $__internal_0f223b23b2d01ea26d743a279639145718af81016ee24712241cf0fe09befd1d = $this->env->getExtension("native_profiler");
+        $__internal_0f223b23b2d01ea26d743a279639145718af81016ee24712241cf0fe09befd1d->enter($__internal_0f223b23b2d01ea26d743a279639145718af81016ee24712241cf0fe09befd1d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocGauche"));
 
         // line 4
-        echo "  <div id=\"blocGauche\">
+        echo "  <div id=\"blocGaucheAccueil\">
     <form class=\"form\">
 \t<div class=\"recherche\">
 \t\t<input type=\"text\" name=\"keyword\" placeholder=\"Recherche\"/>
@@ -68,59 +68,75 @@ class __TwigTemplate_2b1844afaeaf2a34db4ad11637702c4b013fb79b7b124f1a63d48aa9b98
     <div><img src=\"";
         // line 12
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/fsp/images/user.png"), "html", null, true);
-        echo "\" id=\"user\"</img></div>
-    <div id=\"connexion\">
-      <p>Bonjour </p><a href=\"";
-        // line 14
-        echo $this->env->getExtension('routing')->getPath("fsp_compte");
-        echo "\" alt=\"Mon Compte\" title=\"Mon Compte\">
+        echo "\" id=\"user\"</img>
+    </div>
+    <div id=\"compte\">
+      <p>Bonjour 
           ";
-        // line 15
+        // line 16
         if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array(), "any", false, true), "get", array(0 => "prenom"), "method", true, true)) {
-            // line 16
+            // line 17
             echo "            ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "get", array(0 => "prenom"), "method"), "html", null, true);
             echo "
           ";
         }
-        // line 18
-        echo "     </a>
+        // line 19
+        echo "      </p>
     </div>
     <div id=\"barreH2\"></div>
+     <div id=\"compteUser\">
+      <a href=\"";
+        // line 23
+        echo $this->env->getExtension('routing')->getPath("fsp_compte");
+        echo "\" alt=\"Mon Compte\">Mon Compte</a>
+     </div>
+    <div id=\"barreVAccueil\"></div>
+        <div><img src=\"";
+        // line 26
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/fsp/images/deconnexion.png"), "html", null, true);
+        echo "\" id=\"deconnexion\"</img></div>
+        <div id=\"decoLien\">
+        <a href=\"";
+        // line 28
+        echo $this->env->getExtension('routing')->getPath("fsp_deconnexion");
+        echo "\" alt=\"Déconnexion\">Déconnexion</a>
+        </div>
+    <div id=\"barreH3Accueil\"></div>
     <div id=\"ajouterAnnonce\">
       <a href=\"";
-        // line 22
+        // line 32
         echo $this->env->getExtension('routing')->getPath("fsp_ajouter");
         echo "\" alt=\"Ajouter une annonce\" title=\"Ajouter une annonce\">Ajouter une annonce</a>
     </div>
-    <div id=\"barreH3\"></div>
+    <div id=\"barreH4Accueil\"></div>
     <div id=\"modifierAnnonce\">
       <a href=\"";
-        // line 26
+        // line 36
         echo $this->env->getExtension('routing')->getPath("fsp_modifier");
         echo "\" alt=\"Modifier une annonce\" title=\"Modifier une annonce\">Modifier une annonce</a>
     </div>
-    <div id=\"barreH4\"></div>
+    <div id=\"barreH5Accueil\"></div>
     <div id=\"supprimerAnnonce\">
       <a href=\"";
-        // line 30
+        // line 40
         echo $this->env->getExtension('routing')->getPath("fsp_supprimer");
         echo "\" alt=\"Supprimer une annonce\" title=\"Supprimer une annonce\">Supprimer une annonce</a>
     </div>
   </div>
 ";
         
-        $__internal_6402002a57bd6bc3282df41b8be467851c62510f1f6c6f2092ae729972f86a32->leave($__internal_6402002a57bd6bc3282df41b8be467851c62510f1f6c6f2092ae729972f86a32_prof);
+        $__internal_0f223b23b2d01ea26d743a279639145718af81016ee24712241cf0fe09befd1d->leave($__internal_0f223b23b2d01ea26d743a279639145718af81016ee24712241cf0fe09befd1d_prof);
 
     }
 
-    // line 34
+    // line 44
     public function block_blocCentre($context, array $blocks = array())
     {
-        $__internal_280cfec937350fa94bc3eb5af06ee208b2d5b5b304532e5301edbae8edc88501 = $this->env->getExtension("native_profiler");
-        $__internal_280cfec937350fa94bc3eb5af06ee208b2d5b5b304532e5301edbae8edc88501->enter($__internal_280cfec937350fa94bc3eb5af06ee208b2d5b5b304532e5301edbae8edc88501_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
+        $__internal_afc2d21adbf1b6181a214b4064fa1f7a564c0bb56aff3cf48e2aa6f2eb31c258 = $this->env->getExtension("native_profiler");
+        $__internal_afc2d21adbf1b6181a214b4064fa1f7a564c0bb56aff3cf48e2aa6f2eb31c258->enter($__internal_afc2d21adbf1b6181a214b4064fa1f7a564c0bb56aff3cf48e2aa6f2eb31c258_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
 
-        // line 35
+        // line 45
         echo "  <div id=\"blocCentre\">
    <div id=\"contenu\">
     <div id=\"Annonces\">
@@ -130,7 +146,7 @@ class __TwigTemplate_2b1844afaeaf2a34db4ad11637702c4b013fb79b7b124f1a63d48aa9b98
   </div>
 ";
         
-        $__internal_280cfec937350fa94bc3eb5af06ee208b2d5b5b304532e5301edbae8edc88501->leave($__internal_280cfec937350fa94bc3eb5af06ee208b2d5b5b304532e5301edbae8edc88501_prof);
+        $__internal_afc2d21adbf1b6181a214b4064fa1f7a564c0bb56aff3cf48e2aa6f2eb31c258->leave($__internal_afc2d21adbf1b6181a214b4064fa1f7a564c0bb56aff3cf48e2aa6f2eb31c258_prof);
 
     }
 
@@ -146,13 +162,13 @@ class __TwigTemplate_2b1844afaeaf2a34db4ad11637702c4b013fb79b7b124f1a63d48aa9b98
 
     public function getDebugInfo()
     {
-        return array (  124 => 35,  118 => 34,  107 => 30,  100 => 26,  93 => 22,  87 => 18,  81 => 16,  79 => 15,  75 => 14,  70 => 12,  63 => 8,  57 => 4,  51 => 3,  44 => 34,  42 => 3,  36 => 2,  11 => 1,);
+        return array (  140 => 45,  134 => 44,  123 => 40,  116 => 36,  109 => 32,  102 => 28,  97 => 26,  91 => 23,  85 => 19,  79 => 17,  77 => 16,  70 => 12,  63 => 8,  57 => 4,  51 => 3,  44 => 44,  42 => 3,  36 => 2,  11 => 1,);
     }
 }
-/* {% extends "FSPBundle::layout.html.twig" %}*/
+/* {% extends "FSPBundle:User:layout.html.twig" %}*/
 /* {% block body %}*/
 /* {% block blocGauche %}*/
-/*   <div id="blocGauche">*/
+/*   <div id="blocGaucheAccueil">*/
 /*     <form class="form">*/
 /* 	<div class="recherche">*/
 /* 		<input type="text" name="keyword" placeholder="Recherche"/>*/
@@ -160,23 +176,33 @@ class __TwigTemplate_2b1844afaeaf2a34db4ad11637702c4b013fb79b7b124f1a63d48aa9b98
 /* 	</div>*/
 /*     </form>*/
 /*     <div id="barreH1"></div>*/
-/*     <div><img src="{{asset('bundles/fsp/images/user.png')}}" id="user"</img></div>*/
-/*     <div id="connexion">*/
-/*       <p>Bonjour </p><a href="{{path('fsp_compte')}}" alt="Mon Compte" title="Mon Compte">*/
+/*     <div><img src="{{asset('bundles/fsp/images/user.png')}}" id="user"</img>*/
+/*     </div>*/
+/*     <div id="compte">*/
+/*       <p>Bonjour */
 /*           {% if(app.session.get('prenom') is defined ) %}*/
 /*             {{app.session.get('prenom')}}*/
 /*           {% endif %}*/
-/*      </a>*/
+/*       </p>*/
 /*     </div>*/
 /*     <div id="barreH2"></div>*/
+/*      <div id="compteUser">*/
+/*       <a href="{{path('fsp_compte')}}" alt="Mon Compte">Mon Compte</a>*/
+/*      </div>*/
+/*     <div id="barreVAccueil"></div>*/
+/*         <div><img src="{{asset('bundles/fsp/images/deconnexion.png')}}" id="deconnexion"</img></div>*/
+/*         <div id="decoLien">*/
+/*         <a href="{{path('fsp_deconnexion')}}" alt="Déconnexion">Déconnexion</a>*/
+/*         </div>*/
+/*     <div id="barreH3Accueil"></div>*/
 /*     <div id="ajouterAnnonce">*/
 /*       <a href="{{path('fsp_ajouter')}}" alt="Ajouter une annonce" title="Ajouter une annonce">Ajouter une annonce</a>*/
 /*     </div>*/
-/*     <div id="barreH3"></div>*/
+/*     <div id="barreH4Accueil"></div>*/
 /*     <div id="modifierAnnonce">*/
 /*       <a href="{{path('fsp_modifier')}}" alt="Modifier une annonce" title="Modifier une annonce">Modifier une annonce</a>*/
 /*     </div>*/
-/*     <div id="barreH4"></div>*/
+/*     <div id="barreH5Accueil"></div>*/
 /*     <div id="supprimerAnnonce">*/
 /*       <a href="{{path('fsp_supprimer')}}" alt="Supprimer une annonce" title="Supprimer une annonce">Supprimer une annonce</a>*/
 /*     </div>*/

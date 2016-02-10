@@ -21,23 +21,23 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_73e462cc7a9332173d40e17b1e8ab95f6a77dc7845e2bd878a762d91414653b6 = $this->env->getExtension("native_profiler");
-        $__internal_73e462cc7a9332173d40e17b1e8ab95f6a77dc7845e2bd878a762d91414653b6->enter($__internal_73e462cc7a9332173d40e17b1e8ab95f6a77dc7845e2bd878a762d91414653b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:connexion.html.twig"));
+        $__internal_c6db228165c86a2433391f54a26cdbef4fb50c653ce570ae68549f9677137b1e = $this->env->getExtension("native_profiler");
+        $__internal_c6db228165c86a2433391f54a26cdbef4fb50c653ce570ae68549f9677137b1e->enter($__internal_c6db228165c86a2433391f54a26cdbef4fb50c653ce570ae68549f9677137b1e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:connexion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_73e462cc7a9332173d40e17b1e8ab95f6a77dc7845e2bd878a762d91414653b6->leave($__internal_73e462cc7a9332173d40e17b1e8ab95f6a77dc7845e2bd878a762d91414653b6_prof);
+        $__internal_c6db228165c86a2433391f54a26cdbef4fb50c653ce570ae68549f9677137b1e->leave($__internal_c6db228165c86a2433391f54a26cdbef4fb50c653ce570ae68549f9677137b1e_prof);
 
     }
 
     // line 2
     public function block_blocCentre($context, array $blocks = array())
     {
-        $__internal_b3a966746ba4464ef25dd10c10afa93e7815c598d4ab2eac04cb565c84de3aa1 = $this->env->getExtension("native_profiler");
-        $__internal_b3a966746ba4464ef25dd10c10afa93e7815c598d4ab2eac04cb565c84de3aa1->enter($__internal_b3a966746ba4464ef25dd10c10afa93e7815c598d4ab2eac04cb565c84de3aa1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
+        $__internal_73986d0e10cb2ae5715815f76b18e436e370509215c6655ff1440b1f77579766 = $this->env->getExtension("native_profiler");
+        $__internal_73986d0e10cb2ae5715815f76b18e436e370509215c6655ff1440b1f77579766->enter($__internal_73986d0e10cb2ae5715815f76b18e436e370509215c6655ff1440b1f77579766_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
 
         // line 3
-        echo "  <div id=\"blocCentre\">
+        echo "  <div id=\"blocCentreAccueil\">
    <div id=\"contenu\">
     <div id=\"gererConnexion\">
      <p>Connexion</p>
@@ -47,22 +47,26 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
         if (array_key_exists("message", $context)) {
             // line 9
             echo "      <div class=\"erreur\">
-       <ul>";
+         <img src=\"";
             // line 10
+            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/fsp/images/erreur.png"), "html", null, true);
+            echo "\" class=\"erreurLogo\"></img>
+       <ul>";
+            // line 11
             echo twig_escape_filter($this->env, (isset($context["message"]) ? $context["message"] : $this->getContext($context, "message")), "html", null, true);
             echo "</ul>
       </div>
     ";
         }
-        // line 12
+        // line 13
         echo "\t
     <form method=\"POST\" action=\"";
-        // line 13
-        echo $this->env->getExtension('routing')->getPath("fsp_connexion");
+        // line 14
+        echo $this->env->getExtension('routing')->getPath("fsp_validerconnexion");
         echo "\" class=\"formConnexion\">
      <div class=\"connexion\">
-          <input id=\"email\" type=\"text\" placeholder=\"E-mail *\"/>
-          <input id=\"info\" type=\"password\" placeholder=\"Mot de passe *\"/>
+          <input id=\"email\" type=\"text\" name=\"email\" placeholder=\"E-mail *\"/>
+          <input id=\"info\" type=\"password\" name=\"mdp\" placeholder=\"Mot de passe *\"/>
           <input id=\"valider\" type=\"submit\" value=\"Valider\" name=\"valider\"/>
           <input id=\"annuler\" type=\"reset\" value=\"Annuler\" name\"annuler\"/>
      </div>
@@ -71,7 +75,7 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
   </div>
 ";
         
-        $__internal_b3a966746ba4464ef25dd10c10afa93e7815c598d4ab2eac04cb565c84de3aa1->leave($__internal_b3a966746ba4464ef25dd10c10afa93e7815c598d4ab2eac04cb565c84de3aa1_prof);
+        $__internal_73986d0e10cb2ae5715815f76b18e436e370509215c6655ff1440b1f77579766->leave($__internal_73986d0e10cb2ae5715815f76b18e436e370509215c6655ff1440b1f77579766_prof);
 
     }
 
@@ -87,25 +91,26 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
 
     public function getDebugInfo()
     {
-        return array (  61 => 13,  58 => 12,  52 => 10,  49 => 9,  47 => 8,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  65 => 14,  62 => 13,  56 => 11,  52 => 10,  49 => 9,  47 => 8,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "FSPBundle::accueil.html.twig" %}*/
 /* {% block blocCentre %}*/
-/*   <div id="blocCentre">*/
+/*   <div id="blocCentreAccueil">*/
 /*    <div id="contenu">*/
 /*     <div id="gererConnexion">*/
 /*      <p>Connexion</p>*/
 /*     </div>*/
-/*     {% if (message is defined)%}*/
+/*     {% if(message is defined)%}*/
 /*       <div class="erreur">*/
+/*          <img src="{{asset('bundles/fsp/images/erreur.png')}}" class="erreurLogo"></img>*/
 /*        <ul>{{message}}</ul>*/
 /*       </div>*/
 /*     {% endif %}	*/
-/*     <form method="POST" action="{{path('fsp_connexion')}}" class="formConnexion">*/
+/*     <form method="POST" action="{{path('fsp_validerconnexion')}}" class="formConnexion">*/
 /*      <div class="connexion">*/
-/*           <input id="email" type="text" placeholder="E-mail *"/>*/
-/*           <input id="info" type="password" placeholder="Mot de passe *"/>*/
+/*           <input id="email" type="text" name="email" placeholder="E-mail *"/>*/
+/*           <input id="info" type="password" name="mdp" placeholder="Mot de passe *"/>*/
 /*           <input id="valider" type="submit" value="Valider" name="valider"/>*/
 /*           <input id="annuler" type="reset" value="Annuler" name"annuler"/>*/
 /*      </div>*/

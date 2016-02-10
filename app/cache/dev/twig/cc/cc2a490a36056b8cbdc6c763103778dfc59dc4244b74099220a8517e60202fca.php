@@ -8,7 +8,7 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("FSPBundle::accueil.html.twig", "FSPBundle:Theme:evenement.html.twig", 1);
+        $this->parent = $this->loadTemplate("FSPBundle:User:accueil.html.twig", "FSPBundle:Theme:evenement.html.twig", 1);
         $this->blocks = array(
             'blocCentre' => array($this, 'block_blocCentre'),
         );
@@ -16,25 +16,25 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
 
     protected function doGetParent(array $context)
     {
-        return "FSPBundle::accueil.html.twig";
+        return "FSPBundle:User:accueil.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7d31caa5e9a4b7e8fefcd7700167b2ac55d53218816d3c42e19b26269a82f429 = $this->env->getExtension("native_profiler");
-        $__internal_7d31caa5e9a4b7e8fefcd7700167b2ac55d53218816d3c42e19b26269a82f429->enter($__internal_7d31caa5e9a4b7e8fefcd7700167b2ac55d53218816d3c42e19b26269a82f429_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:Theme:evenement.html.twig"));
+        $__internal_0e36418657736e1f94291d773b6d2dda0dcc275e34a33851374c96380790c113 = $this->env->getExtension("native_profiler");
+        $__internal_0e36418657736e1f94291d773b6d2dda0dcc275e34a33851374c96380790c113->enter($__internal_0e36418657736e1f94291d773b6d2dda0dcc275e34a33851374c96380790c113_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:Theme:evenement.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7d31caa5e9a4b7e8fefcd7700167b2ac55d53218816d3c42e19b26269a82f429->leave($__internal_7d31caa5e9a4b7e8fefcd7700167b2ac55d53218816d3c42e19b26269a82f429_prof);
+        $__internal_0e36418657736e1f94291d773b6d2dda0dcc275e34a33851374c96380790c113->leave($__internal_0e36418657736e1f94291d773b6d2dda0dcc275e34a33851374c96380790c113_prof);
 
     }
 
     // line 2
     public function block_blocCentre($context, array $blocks = array())
     {
-        $__internal_64f626afa887ed7b3df031d0d7083075df5dfbe55004990ea3c0dab42e00a918 = $this->env->getExtension("native_profiler");
-        $__internal_64f626afa887ed7b3df031d0d7083075df5dfbe55004990ea3c0dab42e00a918->enter($__internal_64f626afa887ed7b3df031d0d7083075df5dfbe55004990ea3c0dab42e00a918_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
+        $__internal_6003a51848f455151ed37292404900bbb1eac611ad5fdfcfd15bb9f124ee393e = $this->env->getExtension("native_profiler");
+        $__internal_6003a51848f455151ed37292404900bbb1eac611ad5fdfcfd15bb9f124ee393e->enter($__internal_6003a51848f455151ed37292404900bbb1eac611ad5fdfcfd15bb9f124ee393e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
 
         // line 3
         echo "  <div id=\"blocCentre\">
@@ -43,52 +43,41 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
      <p>Annonces - Evénement</p>
     </div>
      <table class =\"listeAnnonce\">
-       <tr>
-           <th class=\"titre\">Titre</th>
-           <th class=\"info\">Info</th>
-       </tr>
 
        ";
-        // line 14
+        // line 10
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["lesAnnonces"]) ? $context["lesAnnonces"] : $this->getContext($context, "lesAnnonces")));
         foreach ($context['_seq'] as $context["_key"] => $context["uneAnnonce"]) {
-            // line 15
-            echo "         ";
-            $context["theme"] = $this->getAttribute($context["uneAnnonce"], "theme", array());
-            // line 16
+            // line 11
             echo "         ";
             $context["titre"] = $this->getAttribute($context["uneAnnonce"], "titre", array());
-            // line 17
+            // line 12
             echo "         ";
             $context["date"] = $this->getAttribute($context["uneAnnonce"], "date", array());
-            // line 18
+            // line 13
             echo "         ";
             $context["prenom"] = $this->getAttribute($context["uneAnnonce"], "prenom", array());
-            // line 19
+            // line 14
             echo "         ";
             $context["etat"] = $this->getAttribute($context["uneAnnonce"], "etat", array());
-            // line 20
+            // line 15
             echo "
        <tr>
-           <td>";
-            // line 22
-            echo twig_escape_filter($this->env, (isset($context["theme"]) ? $context["theme"] : $this->getContext($context, "theme")), "html", null, true);
-            echo "</td>
-           <td>";
-            // line 23
+           <td class=\"titre\">";
+            // line 17
             echo twig_escape_filter($this->env, (isset($context["titre"]) ? $context["titre"] : $this->getContext($context, "titre")), "html", null, true);
             echo "</td>
-           <td>Le ";
-            // line 24
+           <td class=\"date\">Le ";
+            // line 18
             echo twig_escape_filter($this->env, (isset($context["date"]) ? $context["date"] : $this->getContext($context, "date")), "html", null, true);
             echo "</td>
-           <td>Par ";
-            // line 25
+           <td class=\"prenom\">Par ";
+            // line 19
             echo twig_escape_filter($this->env, (isset($context["prenom"]) ? $context["prenom"] : $this->getContext($context, "prenom")), "html", null, true);
             echo "</td>
-           <td>Statut : ";
-            // line 26
+           <td class=\"statut\">Statut : ";
+            // line 20
             echo twig_escape_filter($this->env, (isset($context["etat"]) ? $context["etat"] : $this->getContext($context, "etat")), "html", null, true);
             echo "</td>
        </tr>
@@ -97,13 +86,13 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['uneAnnonce'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 23
         echo "      </table>
    </div>
   </div>
 ";
         
-        $__internal_64f626afa887ed7b3df031d0d7083075df5dfbe55004990ea3c0dab42e00a918->leave($__internal_64f626afa887ed7b3df031d0d7083075df5dfbe55004990ea3c0dab42e00a918_prof);
+        $__internal_6003a51848f455151ed37292404900bbb1eac611ad5fdfcfd15bb9f124ee393e->leave($__internal_6003a51848f455151ed37292404900bbb1eac611ad5fdfcfd15bb9f124ee393e_prof);
 
     }
 
@@ -119,10 +108,10 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
 
     public function getDebugInfo()
     {
-        return array (  101 => 29,  92 => 26,  88 => 25,  84 => 24,  80 => 23,  76 => 22,  72 => 20,  69 => 19,  66 => 18,  63 => 17,  60 => 16,  57 => 15,  53 => 14,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  90 => 23,  81 => 20,  77 => 19,  73 => 18,  69 => 17,  65 => 15,  62 => 14,  59 => 13,  56 => 12,  53 => 11,  49 => 10,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
-/* {% extends "FSPBundle::accueil.html.twig" %}*/
+/* {% extends "FSPBundle:User:accueil.html.twig" %}*/
 /* {% block blocCentre %}*/
 /*   <div id="blocCentre">*/
 /*    <div id="contenu">*/
@@ -130,24 +119,18 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
 /*      <p>Annonces - Evénement</p>*/
 /*     </div>*/
 /*      <table class ="listeAnnonce">*/
-/*        <tr>*/
-/*            <th class="titre">Titre</th>*/
-/*            <th class="info">Info</th>*/
-/*        </tr>*/
 /* */
 /*        {% for uneAnnonce in lesAnnonces %}*/
-/*          {% set theme  = uneAnnonce.theme %}*/
 /*          {% set titre  = uneAnnonce.titre %}*/
 /*          {% set date   =  uneAnnonce.date %}*/
 /*          {% set prenom =  uneAnnonce.prenom %}*/
 /*          {% set etat   =  uneAnnonce.etat %}*/
 /* */
 /*        <tr>*/
-/*            <td>{{theme}}</td>*/
-/*            <td>{{titre}}</td>*/
-/*            <td>Le {{date}}</td>*/
-/*            <td>Par {{prenom}}</td>*/
-/*            <td>Statut : {{etat}}</td>*/
+/*            <td class="titre">{{titre}}</td>*/
+/*            <td class="date">Le {{date}}</td>*/
+/*            <td class="prenom">Par {{prenom}}</td>*/
+/*            <td class="statut">Statut : {{etat}}</td>*/
 /*        </tr>*/
 /*        {% endfor %}*/
 /*       </table>*/

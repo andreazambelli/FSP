@@ -80,5 +80,20 @@ class UserController extends Controller
   $lesAnnonces = $pdo->getAnnoncesUser($email);
   return $this->render('FSPBundle:User:compte.html.twig',array('lesAnnonces'=>$lesAnnonces));
  }
+
+ public function validerinscriptionAction()
+ {
+  $session = $this->get('request')->getSession();
+  $pdo = $this->get('fsp.pdo');
+  $request = $this->get('request');
+  $email = $request->request->get('email');
+  $nom = $request->request->get('nom');
+  $prenom = $request->request->get('prenom');
+  $dateNaissance = $request->request->get('dateNaissance');
+  $pays = $request->request->get('pays');
+  $mdp = $request->request->get('mdp');
+  $pdo->inscription($email,$nom,$prenom,$dateNaissance,$pays,$mdp);
+  return $this->render('FSPBundle:User:connexion.html.twig');
+ }
 }
 

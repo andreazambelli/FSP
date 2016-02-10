@@ -57,5 +57,10 @@ class PdoFsp{
 		return $lesLignes;
 	}
 
+        public function inscription($email,$nom,$prenom,$dateNaissance,$pays,$mdp){
+	$req = "insert into profil values('$email','$nom','$prenom','$dateNaissance','$pays','$mdp')";
+		PdoFsp::$monPdo->exec($req);
+	}
+
 }
 ?>	
