@@ -33,5 +33,15 @@ function connecter($email,$nom,$prenom,$dateNaissance,$pays){
 function deconnecter(){
 	session_destroy();
 }
-
+/**
+ * Transforme une date au format format anglais aaaa-mm-jj vers le format français jj/mm/aaaa 
+ 
+ * @param $madate au format  aaaa-mm-jj
+ * @return la date au format format français jj/mm/aaaa
+*/
+function dateAnglaisVersFrancais($Madate){
+   @list($annee,$mois,$jour)=explode('-',$Madate);
+   $date="$jour"."/".$mois."/".$annee;
+   return $date;
+}
 ?>

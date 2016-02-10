@@ -13,6 +13,8 @@ class ThemeController extends Controller
   $request = $this->get('request');
   $pdo = $this->get('fsp.pdo');
   $theme = 'logement';
+  $date = $request->request->get('date');
+  $date = dateAnglaisVersFrancais($date);
   $lesAnnonces = $pdo->getAnnoncesThemes($theme);
   return $this->render('FSPBundle:Theme:logement.html.twig',array('lesAnnonces'=>$lesAnnonces));
  }

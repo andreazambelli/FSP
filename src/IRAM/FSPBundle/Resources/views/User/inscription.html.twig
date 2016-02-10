@@ -5,14 +5,14 @@
     <div id="gererInscription">
      <p>Inscription</p>
     </div>
-    <form class="formInscription">
+    <form method="POST" action="{{path('fsp_validerinscription')}}" class="formInscription">
       <div class="inscription">
-       <input id="nom" type="text" placeholder="Nom *"/>
-       <input id="info" type="text" placeholder="Prénom *"/>
-       <input id="info" type="text" placeholder="Date de Naissance *"/>
-       <input id="info" type="text" placeholder="Pays *"/>
-       <input id="info" type="text" placeholder="E-mail *"/>
-       <input id="info" type="password" placeholder="Mot de Passe *"/>
+       <input id="nom" type="text" name="nom" placeholder="Nom *"/>
+       <input id="info" type="text" name="prenom" placeholder="Prénom *"/>
+       <input id="info" type="text" name="dateNaissance" placeholder="Date de Naissance *"/>
+       <input id="info" type="text" name="pays" placeholder="Pays *"/>
+       <input id="info" type="text" name="email" placeholder="E-mail *"/>
+       <input id="info" type="password" name="mdp" placeholder="Mot de Passe *"/>
        <input id="info" type="password" placeholder="Confirmation Mot de Passe *"/>
        <input id="validerIns" type="submit" value="Valider" name="valider"/>
        <input id="annulerIns" type="reset" value="Annuler" name="annuler"/>

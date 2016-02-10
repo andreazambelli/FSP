@@ -56,8 +56,18 @@ class PdoFsp{
 		return $lesLignes;
 	}
 
+	public function getLesIdAnnonce(){
+		$req = "select annonce.id as idannonce from annonce order by annonce.id";
+		$rs = PdoFsp::$monPdo->query($req);
+		$lesLignes = $rs->fetchAll();
+		return $lesLignes;
+	}
 
 
+	public function inscription($email,$nom,$prenom,$dateNaissance,$pays,$mdp){
+	$req = "insert into profil values('$email,$nom,$prenom,$dateNaissance,$pays,$mdp')";
+		PdoFsp::$monPdo->exec($req);
+	}
 
 }
 ?>	

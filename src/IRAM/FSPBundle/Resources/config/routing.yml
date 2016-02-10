@@ -38,6 +38,10 @@ fsp_inscription:
     path:    /inscription
     defaults: { _controller: FSPBundle:User:inscription }
 
+fsp_validerinscription:
+    path:    /validerinscription
+    defaults: { _controller: FSPBundle:User:validerinscription }
+
 fsp_compte:
     path:    /mon-compte
     defaults: { _controller: FSPBundle:User:compte }
