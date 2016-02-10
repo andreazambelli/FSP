@@ -97,21 +97,21 @@ body
  margin: 0;
 }
 
-#menuList
+#menuList, #menuListAccueil
 {
  float: left;
  margin: -17px 0 0 -20px;
  display: inline;
 }
 
-#menuList li
+#menuList li, #menuListAccueil li
 {
  float: left;
  display: inline;
  list-style: none;
 }
 
-#menuList img
+#menuList img, #menuListAccueil img
 {
  padding: 0 0 0 70px;
 }
@@ -124,7 +124,25 @@ body
  text-decoration: none;
 }
 
+#menuListAccueil li a
+{
+ color: #000;
+ font-size: 18px;
+ padding: 0 20px;
+ text-decoration: none;
+}
+
+#menuListAccueil li a.plan
+{
+ color: #FB8C39;
+}
+
 #menuList li a:hover
+{
+ color: #000;
+}
+
+#menuListAccueil li a.plan:hover
 {
  color: #000;
 }
@@ -136,7 +154,7 @@ body
  background-color: #B2B4B4;
  border-radius: 4px;
  width: 285px;
- height: 200px;
+ height: 30px;
  margin: 30px 0 10px 5px;
  border: 2px solid #000;
 }
@@ -232,7 +250,14 @@ body
 {
  float: left;
  height: 22px;
- margin: 6px 0 0 22px;
+ margin: 6px 0 0 60px;
+}
+
+#userAccueil
+{ 
+ float: left;
+ height: 22px;
+ margin: 6px 0 0 30px;
 }
 
 #deconnexion
@@ -258,7 +283,7 @@ body
 {
  float: left;
  padding-left: 15px;
- margin: -8px 0 0 2px;
+ margin: -8px 0 0 -8px;
 }
 
 #compteUser
@@ -323,18 +348,29 @@ body
 }
 
 
-#blocCentre
+#blocCentreAccueil
 {
  min-height: 200px;
  height: auto;
  border-radius: 4px;
- margin: -215px 0 100px 300px;
+ margin: -45px 0 100px 300px;
  background-color: #fff;
  width: 900px;
  border: 6px solid #B2B4B4;
 }
 
-#blocCentre p
+#blocCentre
+{
+ min-height: 200px;
+ height: auto;
+ border-radius: 4px;
+ margin: -245px 0 100px 300px;
+ background-color: #fff;
+ width: 900px;
+ border: 6px solid #B2B4B4;
+}
+
+#blocCentre p, #blocCentreAccueil p
 {
  text-decoration: none;
  color: #FB8C39;
@@ -418,26 +454,51 @@ body
 
 .titre
 {
-
+ float: left;
 }
 
 .date
 {
- float: right;
- margin-left: -150px;
+ float: left;
+ margin-left: 45px;
 }
 
 .prenom
 {
- float: right;
- margin: 15px 0 -25px 250px;
+ float: left;
 }
 
 .statut
 {
- float: right;
- margin: 45px 0 -45px 200px;
+ float: left;
 }
+
+table.listeAnnonce
+{
+ margin-bottom: 0.5em;
+}
+
+table.listeAnnonce th, table.listeAnnonce td
+{
+ padding: 1em;
+ vertical-align: top;
+ text-align: left;
+}
+
+table.listeAnnonce caption
+{
+ font-size: 1.1em;
+ text-align: left;
+ margin-bottom: 0.3em;
+}
+
+table.listeAnnonce td
+{
+ vertical-align: top;
+ font-weight: normal;
+}
+
+/*Pagination*/
 
 /*Footer*/
 

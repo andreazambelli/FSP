@@ -2,6 +2,10 @@ fsp_accueil:
     path:     /accueil
     defaults: { _controller: FSPBundle:Home:accueil }
 
+fsp_accueil_connecte:
+    path:     /accueil-connecte
+    defaults: { _controller: FSPBundle:User:accueil }
+
 fsp_logement:
     path:    /annonces-logement
     defaults: { _controller: FSPBundle:Theme:logement }

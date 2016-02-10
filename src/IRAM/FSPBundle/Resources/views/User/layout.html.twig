@@ -9,32 +9,32 @@
 <body>
   <div id="page">
     <div id="entete">
-     <a href="{{path('fsp_accueil')}}"><img src=" {{ asset('bundles/fsp/images/FSP.png') }}" id="logoFSP" alt="FSP - Foreign Student Platform" title="FSP - Foreign Student Platform"/></a>
+     <a href="{{path('fsp_accueil_connecte')}}"><img src=" {{ asset('bundles/fsp/images/FSP.png') }}" id="logoFSP" alt="FSP - Foreign Student Platform" title="FSP - Foreign Student Platform"/></a>
      <img src="{{ asset('bundles/fsp/images/france.png')}}" id="drapeauFR" alt="Français" title="Français" />
      <img src="{{ asset('bundles/fsp/images/GB.png')}}" id="drapeauGB" alt="Anglais" title="Anglais" />
      <img src="{{ asset('bundles/fsp/images/chine.png')}}" id="drapeauCH" alt="Chinois" title="Chinois" />
      </div>
      <div id="menuTheme">
-      <ul id="menuListAccueil">
+      <ul id="menuList">
       <li>
       <img src="{{asset('bundles/fsp/images/maison.png')}}" id="logement" title="Logement"/>
-      <a title="Logement">Logement</a>
+      <a href="{{path('fsp_logement')}}" title="Logement">Logement</a>
       </li>
       <li>
       <img src="{{asset('bundles/fsp/images/cours.png')}}" id="cours" title="Cours"/>
-      <a title="Cours">Cours</a>
+      <a href="{{path('fsp_cours')}}" title="Cours">Cours</a>
       </li>
       <li>
       <img src="{{asset('bundles/fsp/images/evenement.png')}}" id="evenement" title="Evénement"/>
-      <a title="Evenement">Evénement</a>
+      <a href="{{path('fsp_evenement')}}" title="Evenement">Evénement</a>
       </li>
       <li>
       <img src="{{asset('bundles/fsp/images/notredame.png')}}" id="culture" title="Culture"/>
-      <a title="Culture">Culture</a>
+      <a href="{{path('fsp_culture')}}" title="Culture">Culture</a>
       </li>
       <li>
       <img src="{{asset('bundles/fsp/images/planbis.png')}}" id="plan" title="Plan"/>
-      <a href="{{path('fsp_plan')}}" class="plan" title="Plan">Plan</a>
+      <a href="{{path('fsp_plan')}}" title="Plan">Plan</a>
       </li>
       </ul>
      </div>

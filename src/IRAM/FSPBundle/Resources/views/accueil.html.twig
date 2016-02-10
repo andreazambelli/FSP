@@ -2,14 +2,7 @@
 {% block body %}
 {% block blocGauche %}
   <div id="blocGauche">
-    <form class="form">
-	<div class="recherche">
-		<input type="text" name="keyword" placeholder="Recherche"/>
-		<button><img src="{{asset('bundles/fsp/images/search.png')}}" id="search"</img></button>
-	</div>
-    </form>
-    <div id="barreH1"></div>
-    <div><img src="{{asset('bundles/fsp/images/user.png')}}" id="user"</img></div>
+    <div><img src="{{asset('bundles/fsp/images/user.png')}}" id="userAccueil"</img></div>
     <div id="connexion">
       <a href="{{path('fsp_connexion')}}" alt="Connexion" title="Connexion">Connexion</a>
     </div>
@@ -17,44 +10,17 @@
     <div id="inscription">
       <a href="{{path('fsp_inscription')}}" alt="S'inscrire" title="S'inscrire">S'inscrire</a>
     </div>
-    <div id="barreH2"></div>
-    <div id="ajouterAnnonce">
-      <a href="{{path('fsp_ajouter')}}" alt="Ajouter une annonce" title="Ajouter une annonce">Ajouter une annonce</a>
-    </div>
-    <div id="barreH3"></div>
-    <div id="modifierAnnonce">
-      <a href="{{path('fsp_modifier')}}" alt="Modifier une annonce" title="Modifier une annonce">Modifier une annonce</a>
-    </div>
-    <div id="barreH4"></div>
-    <div id="supprimerAnnonce">
-      <a href="{{path('fsp_supprimer')}}" alt="Supprimer une annonce" title="Supprimer une annonce">Supprimer une annonce</a>
-    </div>
   </div>
 {% endblock %}
 {% block blocCentre %}
-  <div id="blocCentre">
+  <div id="blocCentreAccueil">
    <div id="contenu">
-    <div id="Annonces">
-     <p>Annonces</p>
-    </div>
-      <table class ="listeAnnonce">
- 
-       {% for uneAnnonce in lesAnnonces %}
-         {% set theme  = uneAnnonce.theme %}
-         {% set titre  = uneAnnonce.titre %}
-         {% set date   =  uneAnnonce.date %}
-         {% set prenom =  uneAnnonce.prenom %}
-         {% set etat   =  uneAnnonce.etat %}
-       
-       <tr>
-           <td class="theme">{{theme}}</td>
-           <td class="titre">{{titre}}</td>
-           <td class="date">Le {{date}}</td>
-           <td class="prenom">Par {{prenom}}</td>
-           <td class="statut">Statut : {{etat}}</td>
-       </tr>
-       {% endfor %}
-      </table>
+    <p>
+       Bienvenue sur la site de la plateforme d'annonces pour étudiants étrangers arrivant en France.</br>
+Pour accéder aux différents thèmes, il vous faut être connecté: grâce à cette inscription, vous pourrez être au courant des différents cours, évènements de la ville mais aussi des annonces pour les logements.</br>
+Vous pourrez également contribuer à répondre à ses annonces par des commentaires.</br>
+Alors, inscrivez-vous et bonne continuation sur le site !
+    </p>
    </div>
   </div>
 {% endblock %}
