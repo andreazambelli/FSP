@@ -4,7 +4,7 @@ fsp_accueil:
 
 fsp_accueil_connecte:
     path:     /accueil-connecte
-    defaults: { _controller: FSPBundle:User:accueil }
+    defaults: { _controller: FSPBundle:User:accueilConnecte }
 
 fsp_logement:
     path:    /annonces-logement
@@ -29,10 +29,6 @@ fsp_plan:
 fsp_connexion:
     path:    /connexion
     defaults: { _controller: FSPBundle:User:connexion }
-
-fsp_validerconnexion:
-    path:    /validerconnexion
-    defaults: { _controller: FSPBundle:User:validerconnexion }
 
 fsp_deconnexion:
     path:    /deconnexion

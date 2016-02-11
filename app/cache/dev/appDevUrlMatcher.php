@@ -114,7 +114,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
                 // fsp_accueil_connecte
                 if ($pathinfo === '/accueil-connecte') {
-                    return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::accueilAction',  '_route' => 'fsp_accueil_connecte',);
+                    return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::accueilConnecteAction',  '_route' => 'fsp_accueil_connecte',);
                 }
 
             }
@@ -152,11 +152,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // fsp_connexion
         if ($pathinfo === '/connexion') {
             return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::connexionAction',  '_route' => 'fsp_connexion',);
-        }
-
-        // fsp_validerconnexion
-        if ($pathinfo === '/validerconnexion') {
-            return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::validerconnexionAction',  '_route' => 'fsp_validerconnexion',);
         }
 
         // fsp_deconnexion

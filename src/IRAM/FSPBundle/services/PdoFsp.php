@@ -30,16 +30,26 @@ class PdoFsp{
 	}
       
         public function getAnnonces(){
-                $req = "select annonce.titre as titre, annonce.date as date, annonce.contenu as contenu, profil.nom as nom, profil.prenom as prenom, etat.libelle as etat, theme.libelle as theme from annonce, profil, etat, theme where annonce.refidetat = etat.id and annonce.refemail = profil.email and annonce.refidtheme = theme.id order by date desc";
+                $req = "select annonce.titre as titre, annonce.date as date, annonce.contenu as contenu, profil.nom as nom, profil.prenom as prenom, etat.libelle as etat, etat.image as image, theme.libelle as theme, theme.image as imageTheme from annonce, profil, etat, theme where annonce.refidetat = etat.id and annonce.refemail = profil.email and annonce.refidtheme = theme.id order by date desc";
                 $rs = PdoFsp::$monPdo->query($req);
                 $lesLignes = $rs->fetchAll();
+           	$nbLignes = count($lesLignes);
+		for ($i=0; $i<$nbLignes; $i++){
+		  $date = $lesLignes[$i]['date'];
+	          $lesLignes[$i]['date'] =  dateAnglaisVersFrancais($date);
+		}
                 return $lesLignes;  
         }
 
         public function getAnnoncesThemes($theme){
-                  $req = "select annonce.titre as titre, annonce.date as date, annonce.contenu as contenu, profil.nom as nom, profil.prenom as prenom, etat.libelle as etat, theme.libelle as theme from annonce, profil, etat, theme where annonce.refidetat = etat.id and annonce.refemail = profil.email and annonce.refidtheme = theme.id and theme.libelle = '$theme' order by date desc";
+                  $req = "select annonce.titre as titre, annonce.date as date, annonce.contenu as contenu, profil.nom as nom, profil.prenom as prenom, etat.libelle as etat, etat.image as image, theme.libelle as theme from annonce, profil, etat, theme where annonce.refidetat = etat.id and annonce.refemail = profil.email and annonce.refidtheme = theme.id and theme.libelle = '$theme' order by date desc";
                 $rs = PdoFsp::$monPdo->query($req);
                 $lesLignes = $rs->fetchAll();
+           	$nbLignes = count($lesLignes);
+		for ($i=0; $i<$nbLignes; $i++){
+		  $date = $lesLignes[$i]['date'];
+		  $lesLignes[$i]['date'] =  dateAnglaisVersFrancais($date);
+		}
                 return $lesLignes;
         }
 
@@ -47,6 +57,11 @@ class PdoFsp{
 		 $req = "select annonce.titre as titre, annonce.date as date, theme.libelle as theme, etat.libelle as etat from annonce, theme, profil, etat where annonce.refemail = profil.email and profil.email = '$email' and annonce.refidtheme = theme.id and annonce.refidetat = etat.id order by date desc";
 		$rs = PdoFsp::$monPdo->query($req);
 		$lesLignes = $rs->fetchAll();
+            	$nbLignes = count($lesLignes);
+		for ($i=0; $i<$nbLignes; $i++){
+		  $date = $lesLignes[$i]['date'];
+		  $lesLignes[$i]['date'] =  dateAnglaisVersFrancais($date);
+		}
 		return $lesLignes;
 	 }
 

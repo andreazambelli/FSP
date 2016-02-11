@@ -21,20 +21,20 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0e36418657736e1f94291d773b6d2dda0dcc275e34a33851374c96380790c113 = $this->env->getExtension("native_profiler");
-        $__internal_0e36418657736e1f94291d773b6d2dda0dcc275e34a33851374c96380790c113->enter($__internal_0e36418657736e1f94291d773b6d2dda0dcc275e34a33851374c96380790c113_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:Theme:evenement.html.twig"));
+        $__internal_395331644179e0c56079ed581a87176fed2aa0d944caf3360eb7a13a8f1b41fa = $this->env->getExtension("native_profiler");
+        $__internal_395331644179e0c56079ed581a87176fed2aa0d944caf3360eb7a13a8f1b41fa->enter($__internal_395331644179e0c56079ed581a87176fed2aa0d944caf3360eb7a13a8f1b41fa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:Theme:evenement.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0e36418657736e1f94291d773b6d2dda0dcc275e34a33851374c96380790c113->leave($__internal_0e36418657736e1f94291d773b6d2dda0dcc275e34a33851374c96380790c113_prof);
+        $__internal_395331644179e0c56079ed581a87176fed2aa0d944caf3360eb7a13a8f1b41fa->leave($__internal_395331644179e0c56079ed581a87176fed2aa0d944caf3360eb7a13a8f1b41fa_prof);
 
     }
 
     // line 2
     public function block_blocCentre($context, array $blocks = array())
     {
-        $__internal_6003a51848f455151ed37292404900bbb1eac611ad5fdfcfd15bb9f124ee393e = $this->env->getExtension("native_profiler");
-        $__internal_6003a51848f455151ed37292404900bbb1eac611ad5fdfcfd15bb9f124ee393e->enter($__internal_6003a51848f455151ed37292404900bbb1eac611ad5fdfcfd15bb9f124ee393e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
+        $__internal_c011b15785a8f4cb509e05344d3d59c6577377980e2a7b4de716299c1810e2a2 = $this->env->getExtension("native_profiler");
+        $__internal_c011b15785a8f4cb509e05344d3d59c6577377980e2a7b4de716299c1810e2a2->enter($__internal_c011b15785a8f4cb509e05344d3d59c6577377980e2a7b4de716299c1810e2a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
 
         // line 3
         echo "  <div id=\"blocCentre\">
@@ -60,7 +60,7 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
             $context["prenom"] = $this->getAttribute($context["uneAnnonce"], "prenom", array());
             // line 14
             echo "         ";
-            $context["etat"] = $this->getAttribute($context["uneAnnonce"], "etat", array());
+            $context["image"] = $this->getAttribute($context["uneAnnonce"], "image", array());
             // line 15
             echo "
        <tr>
@@ -76,10 +76,11 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
             // line 19
             echo twig_escape_filter($this->env, (isset($context["prenom"]) ? $context["prenom"] : $this->getContext($context, "prenom")), "html", null, true);
             echo "</td>
-           <td class=\"statut\">Statut : ";
+           <td class=\"statut\"><img src=\"";
             // line 20
-            echo twig_escape_filter($this->env, (isset($context["etat"]) ? $context["etat"] : $this->getContext($context, "etat")), "html", null, true);
-            echo "</td>
+            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/fsp/images/"), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["image"]) ? $context["image"] : $this->getContext($context, "image")), "html", null, true);
+            echo "\" id=\"statut\"></img></td>
        </tr>
        ";
         }
@@ -92,7 +93,7 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
   </div>
 ";
         
-        $__internal_6003a51848f455151ed37292404900bbb1eac611ad5fdfcfd15bb9f124ee393e->leave($__internal_6003a51848f455151ed37292404900bbb1eac611ad5fdfcfd15bb9f124ee393e_prof);
+        $__internal_c011b15785a8f4cb509e05344d3d59c6577377980e2a7b4de716299c1810e2a2->leave($__internal_c011b15785a8f4cb509e05344d3d59c6577377980e2a7b4de716299c1810e2a2_prof);
 
     }
 
@@ -108,7 +109,7 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
 
     public function getDebugInfo()
     {
-        return array (  90 => 23,  81 => 20,  77 => 19,  73 => 18,  69 => 17,  65 => 15,  62 => 14,  59 => 13,  56 => 12,  53 => 11,  49 => 10,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  91 => 23,  81 => 20,  77 => 19,  73 => 18,  69 => 17,  65 => 15,  62 => 14,  59 => 13,  56 => 12,  53 => 11,  49 => 10,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "FSPBundle:User:accueil.html.twig" %}*/
@@ -124,13 +125,13 @@ class __TwigTemplate_898fa2a1ff197d5717a7ad8f9cec1938c101fc3b0d52da702d1971451a4
 /*          {% set titre  = uneAnnonce.titre %}*/
 /*          {% set date   =  uneAnnonce.date %}*/
 /*          {% set prenom =  uneAnnonce.prenom %}*/
-/*          {% set etat   =  uneAnnonce.etat %}*/
+/*          {% set image   =  uneAnnonce.image %}*/
 /* */
 /*        <tr>*/
 /*            <td class="titre">{{titre}}</td>*/
 /*            <td class="date">Le {{date}}</td>*/
 /*            <td class="prenom">Par {{prenom}}</td>*/
-/*            <td class="statut">Statut : {{etat}}</td>*/
+/*            <td class="statut"><img src="{{asset('bundles/fsp/images/')}}{{image}}" id="statut"></img></td>*/
 /*        </tr>*/
 /*        {% endfor %}*/
 /*       </table>*/

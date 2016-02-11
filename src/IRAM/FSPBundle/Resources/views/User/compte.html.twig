@@ -9,21 +9,6 @@
 	{{app.session.get('nom')}}
        </p>
       </div> 	
-      <table class ="listeAnnonce">
-       {% for uneAnnonce in lesAnnonces %}
-        {% set theme = uneAnnonce.theme %}
-	{% set titre = uneAnnonce.titre %}
-	{% set date  = uneAnnonce.date %}
-	{% set etat  = uneAnnonce.etat %}
-
-       <tr>
-           <td class="theme">{{theme}}</td>
-	   <td class="titre">{{titre}}</td>
-           <td class="date">Le {{date}}</td>
-           <td class="statut">Statut: {{etat}}</td>
-       </tr>
-       {% endfor %}
-      </table>	    
      </div>
     </div>
 {% endblock %}

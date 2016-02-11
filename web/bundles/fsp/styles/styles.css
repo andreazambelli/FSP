@@ -447,34 +447,26 @@ body
 
 /*Annonces*/
 
-.theme
+.titre, .date, .prenom, .statut
 {
  float: left;
 }
 
-.titre
+#statut
 {
- float: left;
+ height: 55px;
+ margin: -50px 0 -20px 0;
 }
 
-.date
+#theme
 {
- float: left;
- margin-left: 45px;
-}
-
-.prenom
-{
- float: left;
-}
-
-.statut
-{
- float: left;
-}
+ height: 25px;
+ margin: -20px 0 -15px 0;
+}  
 
 table.listeAnnonce
 {
+ width: 100%;
  margin-bottom: 0.5em;
 }
 
@@ -483,6 +475,11 @@ table.listeAnnonce th, table.listeAnnonce td
  padding: 1em;
  vertical-align: top;
  text-align: left;
+}
+
+table.listeAnnonce td.titre
+{
+ width: 50%;
 }
 
 table.listeAnnonce caption
@@ -496,6 +493,11 @@ table.listeAnnonce td
 {
  vertical-align: top;
  font-weight: normal;
+}
+
+th, td
+{
+ border-bottom: 1px solid #ddd;
 }
 
 /*Pagination*/

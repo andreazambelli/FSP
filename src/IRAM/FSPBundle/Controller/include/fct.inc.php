@@ -34,8 +34,8 @@ function deconnecter(){
 	session_destroy();
 }
 
-function dateAnglaisVersFrancais($Madate){
-   @list($annee,$mois,$jour)=explode('-',$Madate);
+function dateAnglaisVersFrancais($date){
+   @list($annee,$mois,$jour)=explode('-',$date);
    $date="$jour"."/".$mois."/".$annee;
    return $date;
 }

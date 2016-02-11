@@ -22,7 +22,7 @@ class UserController extends Controller
   return $this->render('FSPBundle:User:connexion.html.twig');
  }
 
- public function validerconnexionAction()
+ public function accueilConnecteAction()
  {
   $session = $this->get('request')->getSession();
   $request = $this->get('request');

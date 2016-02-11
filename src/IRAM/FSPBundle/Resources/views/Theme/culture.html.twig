@@ -11,13 +11,13 @@
          {% set titre  = uneAnnonce.titre %}
          {% set date   =  uneAnnonce.date %}
          {% set prenom =  uneAnnonce.prenom %}
-         {% set etat   =  uneAnnonce.etat %}
+         {% set image  =  uneAnnonce.image %}
 
        <tr>
            <td class="titre">{{titre}}</td>
            <td class="date">Le {{date}}</td>
            <td class="prenom">Par {{prenom}}</td>
-           <td class="statut">Statut : {{etat}}</td>
+           <td class="statut"><img src="{{asset('bundles/fsp/images/')}}{{image}}" id="statut"></img></td>
        </tr>
        {% endfor %}
       </table>
