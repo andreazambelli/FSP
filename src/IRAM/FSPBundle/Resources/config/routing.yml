@@ -46,6 +46,10 @@ fsp_compte:
     path:    /mon-compte
     defaults: { _controller: FSPBundle:User:compte }
 
+fsp_voirannonce:
+    path:    /voirannonce/{id}
+    defaults: { _controller: FSPBundle:User:voirannonce }
+
 fsp_ajouter:
     path:    /ajouter-annonce
     defaults: { _controller: FSPBundle:User:ajouterAnnonce }

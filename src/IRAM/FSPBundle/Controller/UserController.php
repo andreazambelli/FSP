@@ -52,6 +52,23 @@ public function ajouterAnnonceAction()
 return $this->render('FSPBundle:User:ajouter.html.twig');
  }
 
+public function validerajouterAction()
+{
+ $session = $this->get('request')->getSession();
+ $request = $this->get('request');
+ $pdo = $this->get('fsp.pdo');
+ $titre = $request->request->get('titre');
+ $contenu = $request->request->get('contenu');
+ $date = $request->request->get('date');
+ $theme = $request->request->get('theme');
+ $langue = $request->request->get('langue');
+ $refidetat = '1';
+ $refemail = $session->get('email');
+ $refidtheme
+ $pdo->ajouterAnnonce($date,$titre,$contenu,$refnomlangue,$refemail,$refidtheme,$refidetat);
+ 
+
+
  public function modifierAnnonceAction()
  {
   return $this->render('FSPBundle:User:modifier.html.twig');
@@ -88,6 +105,18 @@ return $this->render('FSPBundle:User:ajouter.html.twig');
  return $this->render('FSPBundle:User:connexion.html.twig');
  }
 
+ public function voirannonceAction()
+ {
+ $session = $this->get('request')->getSession();
+ $pdo = $this->get('fsp.pdo');
+ $request = $this->get('request');
+ $id = $request->request->get('id');
+ $pdo->getLesIdAnnonce();
+ $lesAnnonces = $pdo->AnnonceparId($id);
+ $lesCommentaires = $pdo->getCommentaireAnnonce($id);
+ return $this->render('FSPBundle:User:annonce.html.twig',array('lesAnnonces'=>$lesAnnonces,'lesCommentaires'=>$lesCommentaires));
+ }
+ 
 
 
 

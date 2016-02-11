@@ -33,6 +33,12 @@ class PdoFsp{
                 $req = "select annonce.titre as titre, annonce.date as date, annonce.contenu as contenu, profil.nom as nom, profil.prenom as prenom, etat.libelle as etat, theme.libelle as theme from annonce, profil, etat, theme where annonce.refidetat = etat.id and annonce.refemail = profil.email and annonce.refidtheme = theme.id";
                 $rs = PdoFsp::$monPdo->query($req);
                 $lesLignes = $rs->fetchAll();
+		$nbLignes = count($lesLignes);
+                for ($i=0; $i<$nbLignes; $i++){
+                        $date = $lesLignes[$i]['date'];
+                        $lesLignes[$i]['date'] = dateAnglaisVersFrancais($date);
+                }
+
                 return $lesLignes;  
         }
 
@@ -40,6 +46,11 @@ class PdoFsp{
                   $req = "select annonce.titre as titre, annonce.date as date, annonce.contenu as contenu, profil.nom as nom, profil.prenom as prenom, etat.libelle as etat, theme.libelle as theme from annonce, profil, etat, theme where annonce.refidetat = etat.id and annonce.refemail = profil.email and annonce.refidtheme = theme.id and theme.libelle = '$theme'";
                 $rs = PdoFsp::$monPdo->query($req);
                 $lesLignes = $rs->fetchAll();
+		$nbLignes = count($lesLignes);
+		for ($i=0; $i<$nbLignes; $i++){	
+			$date = $lesLignes[$i]['date'];
+			$lesLignes[$i]['date'] = dateAnglaisVersFrancais($date);
+		}
                 return $lesLignes;
         }
 	public function getAnnoncesUser($email){
@@ -68,6 +79,20 @@ class PdoFsp{
 	$req = "insert into profil  values('$email','$nom','$prenom','$dateNaissance','$pays','$mdp')";
 		PdoFsp::$monPdo->exec($req);
 	}
+
+	public function AnnonceparId($id){
+ 		$req = "select annonce.titre as titre, annonce.contenu as contenu, annonce.date as date, profil.nom as nom, profil.prenom as prenom, theme.libelle from annonce, theme, profil where annonce.refemail = profil.email and annonce.refidtheme = theme.id and annonce.id = '$id'";
+		$rs = PdoFsp::$monPdo->query($req);
+		$lesLignes = $rs->fetchAll();
+		return $lesLignes;
+	}
+	
+	public function ajouterAnnonce($date,$titre,$contenu,$refnomlangue,$refemail,$refidtheme,$refidetat){
+		$req = "insert into annonce values('$date','$titre','$contenu','$refnomlangue,'$refemail','$refidtheme','$refidetat')";
+		PdoFsp::$monPdo->exec($req);
+	}
+
+
 
 }
 ?>	

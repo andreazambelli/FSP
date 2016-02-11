@@ -1,0 +1,43 @@
+{% extends "FSPBundle:User:accueil.html.twig"%}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="Annonce">
+    </div>
+     <table class ="listeAnnonce">
+   
+      {% for uneAnnonce in lesAnnonces %}
+        {% set titre = uneAnnonce.titre %}
+        {% set contenu = uneAnnonce.contenu %}
+        {% set prenom = uneAnnonce.prenom %}
+        {% set nom = uneAnnonce.nom %}
+        {% set etat = uneAnnonce.etat %}
+        
+      <tr>
+	  <td class="titre">{{titre}}</td>
+          <td class="contenu">{{contenu}}</td>
+          <td name="date" class="date">Le{{date}}</td>
+          <td class="prenom">Par {{prenom}} {{nom}}</td>
+	  <td class="statut">Statut : {{etat}}</td>
+      </tr>
+      {% endfor %}
+     </table>
+     <table class ="listeCommentaire">
+      
+      {% for unCommentaire in lesCommentaires %}
+        {% set contenu = unCommentaire.contenu %}
+        {% set prenom = unCommentaire.prenom %}
+        {% set nom = unCommentaire.nom %}
+        {% set date = unCommentaire.date %}
+      
+      <tr>
+          <td class="contenu">{{contenu}}</td>
+          <td class="prenom"> De {{prenom}} {{nom}}</td>
+          <td name="date" class="date">Le {{date}}</td>
+          
+      </tr>
+      {% endfor %}
+     </table>                 
+   </div>
+  </div>
+{% endblock %}
