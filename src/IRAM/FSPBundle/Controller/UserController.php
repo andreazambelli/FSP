@@ -8,7 +8,7 @@ use PdoFsp;
 
 class UserController extends Controller
 {
- public function accueilAction()
+ public function accueilConnecteAction()
  {
     $session = $this->get('request')->getSession();
     $request = $this->get('request');
@@ -22,7 +22,7 @@ class UserController extends Controller
   return $this->render('FSPBundle:User:connexion.html.twig');
  }
 
- public function accueilConnecteAction()
+ public function validerconnectionAction()
  {
   $session = $this->get('request')->getSession();
   $request = $this->get('request');

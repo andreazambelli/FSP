@@ -21,20 +21,20 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_74f6d76454ae24658b72de28b04179bc569c392d1aacdc850194bc391c1cb00b = $this->env->getExtension("native_profiler");
-        $__internal_74f6d76454ae24658b72de28b04179bc569c392d1aacdc850194bc391c1cb00b->enter($__internal_74f6d76454ae24658b72de28b04179bc569c392d1aacdc850194bc391c1cb00b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:connexion.html.twig"));
+        $__internal_f830882eedd4acd5ebec723e554f41e885b1c5af0afbc5179785ce0da438cd60 = $this->env->getExtension("native_profiler");
+        $__internal_f830882eedd4acd5ebec723e554f41e885b1c5af0afbc5179785ce0da438cd60->enter($__internal_f830882eedd4acd5ebec723e554f41e885b1c5af0afbc5179785ce0da438cd60_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:connexion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_74f6d76454ae24658b72de28b04179bc569c392d1aacdc850194bc391c1cb00b->leave($__internal_74f6d76454ae24658b72de28b04179bc569c392d1aacdc850194bc391c1cb00b_prof);
+        $__internal_f830882eedd4acd5ebec723e554f41e885b1c5af0afbc5179785ce0da438cd60->leave($__internal_f830882eedd4acd5ebec723e554f41e885b1c5af0afbc5179785ce0da438cd60_prof);
 
     }
 
     // line 2
     public function block_blocCentre($context, array $blocks = array())
     {
-        $__internal_de8728ddf0b1542394d184b7f0ef802f51454a9521084c76369155fbf2e20b8a = $this->env->getExtension("native_profiler");
-        $__internal_de8728ddf0b1542394d184b7f0ef802f51454a9521084c76369155fbf2e20b8a->enter($__internal_de8728ddf0b1542394d184b7f0ef802f51454a9521084c76369155fbf2e20b8a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
+        $__internal_0a0e90ce0beb882894c58b890510294de557dcc242484fb9d29ccba823e87144 = $this->env->getExtension("native_profiler");
+        $__internal_0a0e90ce0beb882894c58b890510294de557dcc242484fb9d29ccba823e87144->enter($__internal_0a0e90ce0beb882894c58b890510294de557dcc242484fb9d29ccba823e87144_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
 
         // line 3
         echo "  <div id=\"blocCentreAccueil\">
@@ -62,7 +62,7 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
         echo "\t
     <form method=\"POST\" action=\"";
         // line 14
-        echo $this->env->getExtension('routing')->getPath("fsp_accueil_connecte");
+        echo $this->env->getExtension('routing')->getPath("fsp_valider_connection");
         echo "\" class=\"formConnexion\">
      <div class=\"connexion\">
           <input id=\"email\" type=\"text\" name=\"email\" placeholder=\"E-mail *\"/>
@@ -75,7 +75,7 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
   </div>
 ";
         
-        $__internal_de8728ddf0b1542394d184b7f0ef802f51454a9521084c76369155fbf2e20b8a->leave($__internal_de8728ddf0b1542394d184b7f0ef802f51454a9521084c76369155fbf2e20b8a_prof);
+        $__internal_0a0e90ce0beb882894c58b890510294de557dcc242484fb9d29ccba823e87144->leave($__internal_0a0e90ce0beb882894c58b890510294de557dcc242484fb9d29ccba823e87144_prof);
 
     }
 
@@ -107,7 +107,7 @@ class __TwigTemplate_4b9be68a8f6c5adffa3274ee25b7cd5317d633b7ee2fa6705dd9ad631d6
 /*        <ul>{{message}}</ul>*/
 /*       </div>*/
 /*     {% endif %}	*/
-/*     <form method="POST" action="{{path('fsp_accueil_connecte')}}" class="formConnexion">*/
+/*     <form method="POST" action="{{path('fsp_valider_connection')}}" class="formConnexion">*/
 /*      <div class="connexion">*/
 /*           <input id="email" type="text" name="email" placeholder="E-mail *"/>*/
 /*           <input id="info" type="password" name="mdp" placeholder="Mot de passe *"/>*/
