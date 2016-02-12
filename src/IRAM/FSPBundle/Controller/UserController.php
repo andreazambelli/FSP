@@ -76,7 +76,7 @@ class UserController extends Controller
   $session = $this->get('request')->getSession();
   $request = $this->get('request');
   $pdo = $this->get('fsp.pdo');
-  $email = $request->request->get('email');
+  $email = $session->get('email');
   $lesAnnonces = $pdo->getAnnoncesUser($email);
   return $this->render('FSPBundle:User:compte.html.twig',array('lesAnnonces'=>$lesAnnonces));
  }
@@ -95,5 +95,19 @@ class UserController extends Controller
   $pdo->inscription($email,$nom,$prenom,$dateNaissance,$pays,$mdp);
   return $this->render('FSPBundle:User:connexion.html.twig');
  }
+ public function validerajouterAction()
+ {
+ $session = $this->get('request')->getSession();
+ $request = $this->get('request');
+ $pdo = $this->get('fsp.pdo');
+ $titre = $request->request->get('titre');
+ $contenu = $request->request->get('contenu');
+ $date = $request->request->get('date');
+ $theme = $request->request->get('theme');
+ $langue = $request->request->get('langue');
+ $refidetat = '1';
+ $refemail = $session->get('email');
+ $refidtheme = ajoutIdTheme($theme);
+ $pdo->ajouterAnnonce($date,$titre,$contenu,$refnomlangue,$refemail,$refidtheme,$refidetat);
+ }
 }
-

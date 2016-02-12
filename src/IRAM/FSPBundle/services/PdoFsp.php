@@ -54,7 +54,7 @@ class PdoFsp{
         }
 
       	public function getAnnoncesUser($email){
-		 $req = "select annonce.titre as titre, annonce.date as date, theme.libelle as theme, etat.libelle as etat from annonce, theme, profil, etat where annonce.refemail = profil.email and profil.email = '$email' and annonce.refidtheme = theme.id and annonce.refidetat = etat.id order by date desc";
+		 $req = "select annonce.titre as titre, annonce.date as date, theme.libelle as theme, etat.libelle as etat, etat.image as image, theme.image as imageTheme from annonce, theme, profil, etat where annonce.refemail = profil.email and profil.email = '$email' and annonce.refidtheme = theme.id and annonce.refidetat = etat.id order by date desc";
 		$rs = PdoFsp::$monPdo->query($req);
 		$lesLignes = $rs->fetchAll();
             	$nbLignes = count($lesLignes);
@@ -74,6 +74,11 @@ class PdoFsp{
 
         public function inscription($email,$nom,$prenom,$dateNaissance,$pays,$mdp){
 	$req = "insert into profil values('$email','$nom','$prenom','$dateNaissance','$pays','$mdp')";
+		PdoFsp::$monPdo->exec($req);
+	}
+
+	public function ajouterAnnonce($date,$titre,$contenu,$refnomlangue,$refemail,$refidtheme,$refidetat){
+		$req = "insert into annonce values('$date','$titre','$contenu','$refnomlangue,'$refemail','$refidtheme','$refidetat')";
 		PdoFsp::$monPdo->exec($req);
 	}
 

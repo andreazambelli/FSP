@@ -39,4 +39,26 @@ function dateAnglaisVersFrancais($date){
    $date="$jour"."/".$mois."/".$annee;
    return $date;
 }
+
+
+
+ function ajoutIdTheme($theme){
+
+	switch($theme)
+	{
+		case "logement":
+		                $refidtheme = "1";
+	                        break;
+                case "cours":
+				$refidtheme = "2";
+				break;
+		case "evenement":
+				$refidtheme = "3";
+				break;
+		case "culture":
+				$refidtheme = "4";
+				break;
+	}
+	return $refidtheme;
+ }
 ?>

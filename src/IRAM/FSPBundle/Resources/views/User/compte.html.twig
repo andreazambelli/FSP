@@ -1,14 +1,29 @@
 {% extends "FSPBundle:User:accueil.html.twig" %}
 {% block blocCentre %}
-    <div id="blocCentre">
-     <div id="contenu">
+  <div id="blocCentre">
+   <div id="contenu">
       <div id="Compte">
        <p>Mon Compte</p>
        <p>
 	{{app.session.get('prenom')}}
 	{{app.session.get('nom')}}
        </p>
-      </div> 	
-     </div>
-    </div>
+      </div>
+     <table class ="listeAnnonce">
+       {% for uneAnnonce in lesAnnonces %}
+        {% set imageTheme = uneAnnonce.imageTheme %}
+	{% set titre      = uneAnnonce.titre %}
+	{% set date       = uneAnnonce.date %}
+	{% set image      = uneAnnonce.image %}
+
+       <tr>
+           <td class="theme"><img src="{{asset('bundles/fsp/images/')}}{{imageTheme}}" id="theme"></img></td>
+	   <td class="titre">{{titre}}</td>
+           <td class="date">Le {{date}}</td>
+           <td class="statut"><img src="{{asset('bundles/fsp/images/')}}{{image}}" id="statut"></img></td>
+       </tr>
+       {% endfor %}
+     </table>
+   </div>
+  </div>
 {% endblock %}
