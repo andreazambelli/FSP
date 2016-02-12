@@ -1,7 +1,8 @@
 /app/bootstrap.php.cache
 /app/cache/
+/app/cache/dev/profiler
+/app/cache/prod/twig
 /app/config/parameters.yml
-/app/logs/
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /app/phpunit.xml
